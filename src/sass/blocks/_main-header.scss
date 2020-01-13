@@ -1,0 +1,44 @@
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.main-header__top {
+    display: flex;
+    min-height: 70px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.main-header__top .container {
+    display: flex;
+}
+
+.main-header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.main-header__desc {
+    display: flex;
+    align-items: center;
+    margin: 0 65px 0 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.main-header__language-switch {
+    margin: 0;
+}
+
+.main-header__user-navigation {
+    margin: 0 0 0 auto;
+}
+
+.main-header__bottom {
+    background-color: rgba(150, 165, 0, .8);
+}

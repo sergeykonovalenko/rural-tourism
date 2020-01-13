@@ -1,0 +1,31 @@
+.fields-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.fields-list__item {
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.fields-list__label {
+    display: block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    cursor: pointer;
+}
+
+.fields-list__field-box {
+    position: relative;
+    margin: 0;
+}
+
+.fields-list__field {
+    appearance: none;
+}

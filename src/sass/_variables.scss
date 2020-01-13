@@ -1,11 +1,14 @@
 // Colors
-$color-main--lightest: #CBF3BF;
-$color-main--lighten:  #ACEF97;
-$color-main--light:    #74EA4F;
-$color-main:           #3FD411;
-$color-main--dark:     #39BA11;
-$color-main--darken:   #329F11;
-$color-main--darkest:  #184B09;
+//$color-main--lightest: #CBF3BF;
+//$color-main--lighten:  #ACEF97;
+//$color-main--light:    #393939;
+$color-main:             #313131;
+//$color-main--dark:     #39BA11;
+//$color-main--darken:   #329F11;
+//$color-main--darkest:  #184B09;
 
-$color-secondary:      #85622e;
-$color-warning:        #fb5258;
+$color-secondary--lighten: #f5f5dc;
+$color-secondary--light:   #c1cf33;
+$color-secondary:          #a7b51a;
+$color-accent:             #f77900;
+$color-warning:            #fb5258;

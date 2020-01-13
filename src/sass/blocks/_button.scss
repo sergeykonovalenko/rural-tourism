@@ -2,11 +2,25 @@
     position: relative;
     display: inline-block;
     max-width: 100%;
+    padding: 17px 30px;
     user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
     text-align: center;
+    text-transform: uppercase;
+    color: #fff;
     white-space: normal;
     word-wrap: normal;
+    background-color: $color-secondary;
+    border: none;
+    border-radius: 25px;
+    transition: all .15s ease-in;
+    box-shadow: 0 2px 15px rgba(9, 12, 18, .15);
     cursor: pointer;
+
+
+    &:hover,
+    &:focus {
+        background-color: $color-secondary--light;
+    }
 }

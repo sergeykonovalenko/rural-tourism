@@ -10,6 +10,7 @@ html ::before {
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,9 +18,12 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    font-family: "Montserrat", Tahoma, sans-serif;
     color: $color-main;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: $color-secondary--lighten;
 }
 
 a {
@@ -46,15 +50,23 @@ select,
 textarea {
     display: block;
     width: 100%;
-    padding: 0;
+    padding: 16px 25px;
+    //font-weight: 600;
+    font-size: 13px;
     font-family: inherit;
     color: $color-main;
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 25px;
+    border: 1px solid #c2c2c2;
+    transition: all .15s ease-in;
 
     &:hover,
     &:focus {
         outline: none;
+    }
+
+    &:focus {
+        box-shadow: 0 0 10px rgba(194, 194, 194, .7);
     }
 }
 
@@ -62,9 +74,37 @@ textarea {
     resize: none;
 }
 
+::placeholder {
+    color: #5b5b5b;
+}
+
 .container {
     position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
 }
