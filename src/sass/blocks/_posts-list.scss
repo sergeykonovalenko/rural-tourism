@@ -1,0 +1,25 @@
+.posts-list {
+
+}
+
+.posts-list__item {
+    display: flex;
+    width: 373px;
+    height: 260px;
+    margin-bottom: 10px;
+    background-color: #27422d;
+    overflow: hidden;
+    transition: all .15s ease-in;
+
+    &--wide {
+        width: 757px;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, .5);
+    }
+
+    &:hover .post-item__img {
+        transform: scale(1.1) rotate(3deg);
+    }
+}

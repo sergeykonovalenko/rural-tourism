@@ -1,0 +1,35 @@
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links__item {
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social-links__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    transition: all .6s ease;
+    border: 5px solid $color-secondary;
+    background-clip: content-box;
+
+    &:hover,
+    &:focus {
+        transform: rotate(360deg);
+        border: 5px solid rgba(255, 255, 255, .3);
+    }
+}

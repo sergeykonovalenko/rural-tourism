@@ -1,0 +1,38 @@
+.about-section {
+    padding-top: 70px;
+}
+
+.about-section__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.about-section__content {
+
+}
+
+.about-section__content picture {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.about-section__content img {
+    width: 415px;
+    border-radius: 7px;
+}
+
+.about-section__subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.about-section .about-section__button-box {
+    margin-top: 35px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.about-section__button {
+    min-width: 165px;
+}

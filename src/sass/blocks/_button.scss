@@ -2,12 +2,14 @@
     position: relative;
     display: inline-block;
     max-width: 100%;
-    padding: 17px 30px;
+    padding: 16px 30px;
     user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.25;
     text-align: center;
-    text-transform: uppercase;
     color: #fff;
     white-space: normal;
     word-wrap: normal;
@@ -18,9 +20,35 @@
     box-shadow: 0 2px 15px rgba(9, 12, 18, .15);
     cursor: pointer;
 
-
     &:hover,
     &:focus {
         background-color: $color-secondary--light;
+    }
+
+    &--white {
+        color: $color-main;
+        background-color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-accent;
+        }
+    }
+
+    &--subscription {
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            background: url("img/bg/note.svg") no-repeat 0 0;
+            background-size: contain;
+        }
     }
 }

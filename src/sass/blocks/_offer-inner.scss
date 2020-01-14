@@ -1,0 +1,22 @@
+.offer-inner {
+    padding-top: 220px;
+    padding-bottom: 90px;
+    background-color: $color-secondary--darkest;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.offer-inner__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.offer-inner__title mark {
+    padding: 3px 15px;
+    color: #fff;
+    background-color: rgba(34, 34, 34, .3);
+    border-radius: 7px;
+    box-decoration-break: clone;
+}

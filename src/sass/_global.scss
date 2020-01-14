@@ -78,6 +78,39 @@ textarea {
     color: #5b5b5b;
 }
 
+h1,
+h2,
+h3,
+h4,
+.heading-2,
+.heading-3,
+.heading-4 {
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    //font-weight: 700;
+    //font-size: 48px;
+}
+
+h2,
+.heading-2 {
+    font-size: 24px;
+}
+
+h3,
+.heading-3 {
+    //font-size: 28px;
+}
+
+h4,
+.heading-4 {
+    //font-size: 18px;
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -103,8 +136,12 @@ textarea {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1230px) {
     .container {
         max-width: 1170px;
+
+        .previous-views & {
+            max-width: 1200px;
+        }
     }
 }

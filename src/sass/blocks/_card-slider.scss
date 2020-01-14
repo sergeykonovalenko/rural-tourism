@@ -1,33 +1,44 @@
-.offer-slider {
+.card-slider {
     @include slider-fix(100%);
+
+    padding-bottom: 20px;
 }
 
-.offer-slider__item {
-    background-color: $color-secondary--darkest;
+.card-slider__item {
+    display: flex !important;
+    padding: 30px 0;
 }
 
-.offer-slider__img-box {
-
+.card-slider .card-item:focus {
+    outline: none;
 }
 
-.offer-slider__img {
-    width: 100%;
-    height: 640px;
-    object-fit: cover;
+.card-slider .slick-track {
+    display: flex !important;
 }
 
-.offer-slider .slick-dots {
+.card-slider .slick-slide {
+    display: flex;
+    justify-content: center;
+    height: inherit !important;
+}
+
+.card-slider .slick-slide > div {
+    display: flex;
+}
+
+.card-slider .slick-dots {
     margin: 0;
     padding: 0;
     list-style: none;
     position: absolute;
     display: flex;
-    bottom: 230px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.offer-slider .slick-dots li {
+.card-slider .slick-dots li {
     margin-right: 10px;
 
     &:last-child {
@@ -35,7 +46,7 @@
     }
 }
 
-.offer-slider .slick-dots button {
+.card-slider .slick-dots button {
     display: block;
     width: 10px;
     height: 10px;
@@ -51,6 +62,6 @@
     transition: all .3s ease;
 }
 
-.offer-slider .slick-active button {
+.card-slider .slick-active button {
     background-color: $color-secondary;
 }

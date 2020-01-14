@@ -1,0 +1,15 @@
+.feedback-footer {
+    display: flex;
+    align-items: flex-start;
+}
+
+.feedback-footer__txt {
+    margin: 0 75px 0 0;
+    flex-grow: 1;
+    font-size: 12px;
+    color: #626262;
+}
+
+.feedback-footer__button {
+    flex-shrink: 0;
+}
