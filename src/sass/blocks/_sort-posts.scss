@@ -1,0 +1,38 @@
+.sort-posts {
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 0;
+        height: 0;
+        margin-top: 1px;
+        border-style: solid;
+        border-width: 9px 5.5px 0 5.5px;
+        border-color: $color-secondary transparent transparent transparent;
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+}
+
+.sort-posts__label {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.sort-posts__field {
+    padding: 17px 50px 17px 0;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}

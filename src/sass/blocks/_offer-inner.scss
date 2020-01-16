@@ -1,10 +1,30 @@
 .offer-inner {
-    padding-top: 220px;
-    padding-bottom: 90px;
+    padding-top: 230px;
+    padding-bottom: 100px;
     background-color: $color-secondary--darkest;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+/***** offer-inner--article *****/
+.no-js .offer-inner--article,
+.no-webp .offer-inner--article {
+    background-image: url("img/bg/article.jpg");
+}
+
+.webp .offer-inner--article {
+    background-image: url("img/bg/article.webp");
+}
+
+/***** offer-inner--articles *****/
+.no-js .offer-inner--articles,
+.no-webp .offer-inner--articles {
+    background-image: url("img/bg/articles.jpg");
+}
+
+.webp .offer-inner--articles {
+    background-image: url("img/bg/articles.webp");
 }
 
 .offer-inner__title {
@@ -19,4 +39,5 @@
     background-color: rgba(34, 34, 34, .3);
     border-radius: 7px;
     box-decoration-break: clone;
+    text-shadow: 0 2px 15px rgba(23, 26, 31, .25);
 }

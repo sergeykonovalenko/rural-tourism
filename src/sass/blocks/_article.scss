@@ -1,0 +1,43 @@
+.article {
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+.article__back-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 35px;
+    padding-left: 30px;
+    font-size: 16px;
+    color: $color-main;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 9px 15px 9px 0;
+        border-color: transparent $color-secondary transparent transparent;
+        transition: all .15s ease-in;
+        transform: translate(0, -50%);
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-secondary;
+    }
+
+    &:hover span,
+    &:focus span {
+        border-bottom-color: transparent;
+    }
+}
+
+.article__back-link span {
+    border-bottom: 1px solid $color-main;
+    transition: all .15s ease-in;
+}

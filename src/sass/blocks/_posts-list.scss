@@ -15,6 +15,11 @@
         width: 757px;
     }
 
+    &--big {
+        width: 756px;
+        height: 530px;
+    }
+
     &:hover {
         box-shadow: 3px 3px 15px rgba(0, 0, 0, .5);
     }

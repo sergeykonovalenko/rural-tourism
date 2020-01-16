@@ -24,8 +24,31 @@
 .fields-list__field-box {
     position: relative;
     margin: 0;
+
+    &--select {
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 0;
+            height: 0;
+            margin-top: 1px;
+            border-style: solid;
+            border-width: 9px 5.5px 0 5.5px;
+            border-color: $color-secondary transparent transparent transparent;
+            transform: translate(0, -50%);
+            pointer-events: none;
+        }
+    }
 }
 
 .fields-list__field {
+    cursor: pointer;
     appearance: none;
+
+    .fields-list__field-box--select & {
+        padding-right: 45px;
+    }
 }
