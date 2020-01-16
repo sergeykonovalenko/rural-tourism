@@ -1,0 +1,53 @@
+.arrow-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: $color-main;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        transition: all .15s ease-in;
+        transform: translate(0, -50%);
+    }
+
+    &--to-left {
+        padding-left: 30px;
+
+        &::before {
+            left: 0;
+            border-width: 9px 15px 9px 0;
+            border-color: transparent $color-secondary transparent transparent;
+        }
+    }
+
+    &--to-right {
+        padding-right: 30px;
+
+        &::before {
+            right: 0;
+            border-width: 9px 0 9px 15px;
+            border-color: transparent transparent transparent $color-secondary;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-secondary;
+    }
+
+    &:hover span,
+    &:focus span {
+        border-bottom-color: transparent;
+    }
+}
+
+.arrow-link span {
+    border-bottom: 1px solid $color-main;
+    transition: all .15s ease-in;
+}

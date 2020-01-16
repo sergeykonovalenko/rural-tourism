@@ -1,0 +1,35 @@
+.host {
+    position: relative;
+}
+
+.host__img-box {
+
+}
+
+.host__img {
+    border-radius: 7px;
+}
+
+.host__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 15px;
+    line-height: 1.5;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 0 0 7px 7px;
+}
+
+.host__name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.host__position {
+    margin-top: 0;
+    margin-bottom: 0;
+}

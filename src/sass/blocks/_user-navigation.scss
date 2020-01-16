@@ -21,14 +21,13 @@
     line-height: 1.25;
     color: $color-main;
 
-    &:hover,
-    &:focus {
-        color: $color-secondary;
-    }
+    //&:hover,
+    //&:focus {
+    //
+    //}
 
     &:hover span::after,
     &:focus span::after {
-        background-color: $color-secondary;
         transform: scale(1);
         opacity: 1;
     }

@@ -1,0 +1,51 @@
+.host-blog {
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+.host-blog__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.host-blog__wr {
+    display: flex;
+}
+
+.host-blog__left {
+    flex-shrink: 0;
+    width: 360px;
+    margin-right: 50px;
+}
+
+.host-blog__host {
+    margin-bottom: 40px;
+}
+
+.host-blog__right {
+    flex-grow: 1;
+}
+
+.host-blog__excerpt {
+    margin-bottom: 40px;
+}
+
+.host-blog__back-link-box {
+    text-align: right;
+}
+
+.host-blog__back-link {
+
+}
+
+.host-blog__actions {
+    margin-bottom: 40px;
+}
+
+.host-blog__posts {
+    @include reset-list;
+}
+
+.host-blog__wp-pagenavi {
+    justify-content: flex-start;
+}

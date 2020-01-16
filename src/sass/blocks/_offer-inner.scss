@@ -27,6 +27,26 @@
     background-image: url("img/bg/articles.webp");
 }
 
+/***** offer-inner--articles *****/
+.no-js .offer-inner--discounts,
+.no-webp .offer-inner--discounts {
+    background-image: url("img/bg/discounts-offer.jpg");
+}
+
+.webp .offer-inner--discounts {
+    background-image: url("img/bg/discounts-offer.webp");
+}
+
+/***** offer-inner--articles *****/
+.no-js .offer-inner--host-blog,
+.no-webp .offer-inner--host-blog {
+    background-image: url("img/bg/host-blog-offer.jpg");
+}
+
+.webp .offer-inner--host-blog {
+    background-image: url("img/bg/host-blog-offer.webp");
+}
+
 .offer-inner__title {
     margin: 0;
     font-weight: 700;

@@ -77,7 +77,7 @@
     }
 }
 
-.content a {
+.content a:not(.arrow-link):not(.posts-list-extra__img-link) {
     color: $color-secondary;
     border-bottom: 1px solid $color-secondary;
     transition: all .15s ease-in;
