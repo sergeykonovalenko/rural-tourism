@@ -1,0 +1,47 @@
+.object-nav {
+    background-color: #fff;
+}
+
+.object-nav__list {
+    @include reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.object-nav__list li {
+    flex-grow: 1;
+}
+
+.object-nav__list a {
+    position: relative;
+    display: block;
+    padding: 27px 30px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: $color-main;
+    text-align: center;
+    transition: all .3s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $color-secondary;
+        transition: all .3s ease;
+        transform: scaleX(0);
+    }
+
+    &:hover {
+        color: $color-secondary;
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}

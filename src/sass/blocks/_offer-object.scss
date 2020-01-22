@@ -1,0 +1,125 @@
+.offer-object {
+    @include slider-fix(100%);
+}
+
+.offer-object__item {
+    position: relative;
+    display: flex !important;
+    height: 570px;
+    background-color: $color-secondary--darkest;
+    overflow: hidden;
+}
+
+.offer-object__item .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+
+.offer-object__txt {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 0 4px 4px 0;
+}
+
+.offer-object__txt p {
+    margin: 0;
+}
+
+.offer-object__txt strong {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.offer-object__txt *:first-child {
+    margin-top: 0;
+}
+
+.offer-object__txt *:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.offer-object__img-box {
+
+}
+
+.offer-object__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-object__blur-box {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    z-index: 1;
+    filter: blur(10px);
+}
+
+.offer-object__blur-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-object__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transform: translate(0, -50%);
+
+    &--prev {
+        left: calc(50vw - 560px);
+
+        &:hover .offer-object__icon {
+            transform: translate(-5px, 0);
+        }
+    }
+
+    &--next {
+        right: calc(50vw - 560px);
+
+        &:hover .offer-object__icon {
+            transform: translate(5px, 0);
+        }
+    }
+
+    &:hover .offer-object__icon {
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.offer-object__icon {
+    opacity: .7;
+    transition: all .15s ease-in;
+}
+
+.offer-object__icon svg {
+    display: block;
+}

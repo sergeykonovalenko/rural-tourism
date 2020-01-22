@@ -111,6 +111,109 @@ h4,
     //font-size: 18px;
 }
 
+.heading-2 {
+
+    &--extra-big {
+        padding-bottom: 22px;
+
+        & span {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 3px;
+                background-color: $color-secondary;
+            }
+
+            &::before {
+                bottom: -16px;
+                width: 50%;
+            }
+
+            &::after {
+                bottom: -26px;
+                width: 30%;
+            }
+        }
+    }
+
+    &--extra-small {
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: 10%;
+            height: .4em;
+            margin-bottom: .15em;
+            vertical-align: middle;
+            border-top: 2px solid $color-secondary;
+            border-bottom: 2px solid $color-secondary;
+        }
+
+        &::before {
+            right: .5em;
+            margin-left: -10%;
+        }
+
+        &::after {
+            left: .5em;
+            margin-right: -10%;
+        }
+    }
+
+    &--icon-right {
+
+        &::after {
+            content: "";
+            flex-shrink: 0;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: 15px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        
+        &--gallery::after {
+            width: 28px;
+            height: 23px;
+            background-image: url("img/bg/photo-camera.svg");
+        }
+
+        &--terms-of-placement::after {
+            width: 30px;
+            height: 19px;
+            background-image: url("img/bg/terms-of-placement.svg");
+        }
+    }
+
+    &--top-icon {
+        padding-top: 55px;
+        background-repeat: no-repeat;
+        background-position: center top;
+        //&::before {
+        //    content: "";
+        //    display: block;
+        //    margin: 0 auto 10px;
+        //    background-repeat: no-repeat;
+        //    background-position: 0 0;
+        //    background-size: contain;
+        //}
+        //
+        &--guest-houses {
+            background-size: 45px 43px;
+            background-image: url("img/bg/guest-houses.svg");
+        }
+    }
+}
+
 .container {
     position: relative;
     width: 100%;

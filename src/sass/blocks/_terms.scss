@@ -1,0 +1,91 @@
+.terms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: -30px -30px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.terms__item {
+    margin-top: 30px;
+    margin-right: 30px;
+    line-height: 1.35;
+    text-align: center;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 45px;
+        height: 45px;
+        margin: 0 auto 17px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+    }
+
+    &--guest-house::before {
+        background-image: url("img/bg/guest-house.svg");
+    }
+
+    &--private-rooms::before {
+        background-image: url("img/bg/private-rooms.svg");
+    }
+
+    &--rooms::before {
+        background-image: url("img/bg/rooms.svg");
+    }
+
+    &--cows::before {
+        background-image: url("img/bg/cows.svg");
+    }
+
+    &--horses::before {
+        background-image: url("img/bg/horses.svg");
+    }
+
+    &--bees::before {
+        background-image: url("img/bg/bees.svg");
+    }
+
+    &--ducks::before {
+        background-image: url("img/bg/ducks.svg");
+    }
+
+    &--chickens::before {
+        background-image: url("img/bg/chickens.svg");
+    }
+
+    &--geese::before {
+        background-image: url("img/bg/geese.svg");
+    }
+
+    &--rural-statehood::before {
+        background-image: url("img/bg/rural-statehood.svg");
+    }
+
+    &--work-yourself::before {
+        background-image: url("img/bg/work-yourself.svg");
+    }
+
+    &--go-to-the-forest::before {
+        background-image: url("img/bg/go-to-the-forest.svg");
+    }
+
+    &--hunting::before {
+        background-image: url("img/bg/hunting.svg");
+    }
+}
+
+.terms__name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.terms__info {
+    margin-top: 7px;
+    margin-bottom: 0;
+    font-size: 12px;
+}

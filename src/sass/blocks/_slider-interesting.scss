@@ -1,0 +1,98 @@
+.slider-interesting {
+    @include slider-fix(100%);
+}
+
+.slider-interesting__item {
+
+}
+
+.slider-interesting__link {
+    display: block;
+    padding: 0 30px;
+    color: $color-main;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.slider-interesting__img-box {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 34px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.slider-interesting__img {
+    width: 100%;
+    height: 100%;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity, transform, filter;
+    object-fit: cover;
+
+    &:hover {
+        transform: scale(1.1) rotate(3deg);
+    }
+}
+
+.slider-interesting__txt {
+    margin-bottom: 20px;
+}
+
+.slider-interesting__txt h3 {
+    margin-bottom: 10px;
+}
+
+.slider-interesting__txt p {
+    margin: 0;
+}
+
+.slider-interesting__txt *:first-child {
+    margin-top: 0;
+}
+
+.slider-interesting__txt *:last-child {
+    margin-bottom: 0;
+}
+
+.slider-interesting__more-box {
+    margin: 0;
+    text-align: right;
+}
+
+.slider-interesting__more {
+
+}
+
+.slider-interesting__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translate(0, -50%);
+
+    &--prev {
+        left: -15px;
+    }
+
+    &--next {
+        right: -15px;
+    }
+
+    &:hover path {
+        stroke: $color-accent;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.slider-interesting__arrow path {
+    transition: all .15s ease-in;
+}

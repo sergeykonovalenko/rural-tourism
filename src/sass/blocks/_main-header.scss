@@ -4,12 +4,20 @@
     left: 0;
     z-index: 1;
     width: 100%;
+
+    &--static {
+        position: static;
+    }
 }
 
 .main-header__top {
     display: flex;
     min-height: 70px;
     background-color: rgba(255, 255, 255, .8);
+
+    .main-header--static & {
+        background-color: rgba(255, 255, 255, 1);
+    }
 }
 
 .main-header__top .container {
@@ -43,4 +51,8 @@
 
 .main-header__bottom {
     background-color: rgba(150, 165, 0, .8);
+
+    .main-header--static {
+        background-color: rgba(150, 165, 0, 1);
+    }
 }

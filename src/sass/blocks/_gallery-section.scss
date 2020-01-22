@@ -1,0 +1,25 @@
+.gallery-section {
+    padding-top: 70px;
+}
+
+.gallery-section__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.gallery-section__gallery {
+    margin: 0;
+}
+
+.gallery-section .gallery__item:nth-child(n + 7) {
+    display: none;
+}
+
+.gallery-section__button-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery-section__button {
+
+}

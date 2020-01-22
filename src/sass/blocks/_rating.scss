@@ -1,0 +1,18 @@
+.rating {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.rating__item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.rating__icon {
+    display: block;
+}
