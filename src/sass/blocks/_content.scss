@@ -77,7 +77,7 @@
     }
 }
 
-.content a:not(.arrow-link):not(.posts-list-extra__img-link) {
+.content a:not(.arrow-link):not(.posts-list-extra__img-link):not(.gallery__link):not(.about-section__button) {
     color: $color-secondary;
     border-bottom: 1px solid $color-secondary;
     transition: all .15s ease-in;

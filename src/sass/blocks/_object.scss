@@ -1,8 +1,17 @@
 .object {
+    padding-top: 70px;
+}
 
+.object__title-icon {
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .object__title {
     margin-top: 0;
     margin-bottom: 40px;
+}
+
+.object__more {
+    margin-top: 42px;
 }

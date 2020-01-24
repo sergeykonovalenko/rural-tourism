@@ -1,11 +1,11 @@
 .button {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     max-width: 100%;
     padding: 16px 30px;
     user-select: none;
     touch-action: manipulation;
-    vertical-align: middle;
     font-weight: 700;
     font-size: 15px;
     line-height: 1.25;
@@ -28,6 +28,7 @@
     &--white {
         color: $color-main;
         background-color: #fff;
+        transition: none;
 
         &:hover,
         &:focus {
@@ -36,7 +37,7 @@
         }
     }
 
-    &--subscription {
+    &--with-icon {
         display: inline-flex;
         align-items: center;
 
@@ -44,11 +45,55 @@
             content: "";
             display: block;
             flex-shrink: 0;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+
+        &--subscription::before {
             width: 20px;
             height: 20px;
-            margin-right: 15px;
-            background: url("img/bg/note.svg") no-repeat 0 0;
-            background-size: contain;
+            background-image: url("img/bg/note.svg");
+        }
+
+        &--plus-icon::before {
+            width: 12px;
+            height: 12px;
+            background-image: url("img/bg/plus.svg");
+        }
+    }
+
+    &--extra {
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $color-accent;
+        transform-style: preserve-3d;
+        transition: all .3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-accent--dark;
+            border-radius: 25px;
+            transform: translateZ(-1px);
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $color-accent--dark;
+            transform: translateY(2px);
+        }
+
+        &:hover::before,
+        &:focus::before {
+            height: 90%;
         }
     }
 }

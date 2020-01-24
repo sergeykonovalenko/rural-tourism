@@ -1,0 +1,30 @@
+.host-blog-section {
+    padding-top: 80px;
+}
+
+.host-blog-section__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.host-blog-section__box {
+    display: flex;
+}
+
+.host-blog-section__left {
+    flex-shrink: 0;
+    margin-right: 50px;
+}
+
+.host-blog-section__right {
+    flex-grow: 1;
+}
+
+.host-blog-section__posts {
+    margin: 0 0 40px 0;
+}
+
+.host-blog-section__button-box {
+    margin: 0;
+    text-align: right;
+}

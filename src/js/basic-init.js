@@ -62,21 +62,168 @@ $(document).ready(function () {
         $grid.masonry('layout');
     });
 
+    // smooth page scrolling
+    $('.scrollto').click(function () {
+        let elementClick = '#' + $(this).attr('href').split('#')[1];
+        let destination = $(elementClick).offset().top;
+        jQuery('html:not(:animated),body:not(:animated)').animate({scrollTop: destination - 0}, 800);
+        return false;
+    });
+
     // show/hide full information
     $('.more-info__button').on('click', function () {
-        let moreInfoContent = $(this).closest('.more-info').find('.more-info__content');
+        let moreInfoContent = $(this).closest('.more-info').find('.more-info__feature');
         moreInfoContent.fadeToggle();
         $(this).toggleClass('more-button--close');
         $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Скрыть подробную информацию' : 'Показать подробную информацию');
     });
 
-    // show/hide gallery
+    // show/hide more objects
+    $('.object-card__button-more').on('click', function () {
+        let objectMore = $(this).closest('.object').find('.object-more');
+        $(this).toggleClass('more-button--close');
+        objectMore.fadeToggle();
+        $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Скрыть подробную информацию' : 'Показать подробную информацию');
+    });
+
+    // show/hide more gallery elements
     let galleryItemsHidden = $('.gallery-section .gallery__item:nth-child(n + 7)');
+    galleryItemsHidden.fadeOut(0);
 
     $('.gallery-section__button').on('click', function () {
         galleryItemsHidden.fadeToggle();
         $(this).toggleClass('more-button--close');
         $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Скрыть фотографии' : 'Показать все фотографии');
+    });
+
+    // show/hide more reviews
+    let reviewsHidden = $('.reviews-list__item:nth-child(n + 4)');
+    reviewsHidden.fadeOut(0);
+
+    $('.guest-reviews__button-more').on('click', function () {
+        reviewsHidden.fadeToggle();
+        $('.reviews-list').toggleClass('reviews-list--show-all');
+        $(this).toggleClass('more-button--close');
+        $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Скрыть отзывы' : 'Показать больше отзывов');
+    });
+
+    // init progress bar line
+    function initProgressBarLine(selector, value) {
+        if (document.querySelector(selector)) {
+            let bar = new ProgressBar.Line(selector, {
+                strokeWidth: 1,
+                easing: 'easeInOut',
+                duration: 1400,
+                color: '#a7b51a',
+                trailColor: '#e9e9e9',
+                trailWidth: 1,
+                svgStyle: {width: '100%', height: '100%'},
+                text: {
+                    className: 'indicators-list__label',
+                    style: null,
+                    autoStyleContainer: false
+                },
+                from: {color: '#d75c2b'},
+                to: {color: '#a7b51a'},
+                step: (state, bar) => {
+                    bar.path.setAttribute('stroke', state.color);
+                    $(bar.text).css({color:state.color});
+                    bar.setText( (bar.value() * 10).toFixed(1) );
+                }
+            });
+
+            bar.animate(value);  // Number from 0.0 to 1.0
+        }
+    }
+
+    // overall rating
+    initProgressBarLine('.js-overall-rating-housing', 0.85);
+    initProgressBarLine('.js-overall-rating-service', 0.95);
+    initProgressBarLine('.js-overall-rating-nutrition', 0.23);
+    initProgressBarLine('.js-overall-rating-entertainment', 0.87);
+    initProgressBarLine('.js-overall-rating-location', 0.51);
+    // user 1 rating
+    initProgressBarLine('.js-user-1-rating-housing', 0.85);
+    initProgressBarLine('.js-user-1-rating-service', 0.97);
+    initProgressBarLine('.js-user-1-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-1-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-1-rating-location', 0.51);
+    // user 2 rating
+    initProgressBarLine('.js-user-2-rating-housing', 0.85);
+    initProgressBarLine('.js-user-2-rating-service', 0.97);
+    initProgressBarLine('.js-user-2-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-2-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-2-rating-location', 0.51);
+    // user 3 rating
+    initProgressBarLine('.js-user-3-rating-housing', 0.85);
+    initProgressBarLine('.js-user-3-rating-service', 0.97);
+    initProgressBarLine('.js-user-3-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-3-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-3-rating-location', 0.51);
+    // user 4 rating
+    initProgressBarLine('.js-user-4-rating-housing', 0.85);
+    initProgressBarLine('.js-user-4-rating-service', 0.97);
+    initProgressBarLine('.js-user-4-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-4-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-4-rating-location', 0.51);
+    // user 5 rating
+    initProgressBarLine('.js-user-5-rating-housing', 0.85);
+    initProgressBarLine('.js-user-5-rating-service', 0.97);
+    initProgressBarLine('.js-user-5-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-5-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-5-rating-location', 0.51);
+    // user 6 rating
+    initProgressBarLine('.js-user-6-rating-housing', 0.85);
+    initProgressBarLine('.js-user-6-rating-service', 0.97);
+    initProgressBarLine('.js-user-6-rating-nutrition', 0.18);
+    initProgressBarLine('.js-user-6-rating-entertainment', 0.75);
+    initProgressBarLine('.js-user-6-rating-location', 0.51);
+
+    // init progress bar circle
+    function initProgressBarCircle(selector, value) {
+        if (document.querySelector(selector)) {
+            let bar = new ProgressBar.Circle(selector, {
+                color: '#a7b51a',
+                trailColor: '#e9e9e9',
+                trailWidth: 12,
+                duration: 1400,
+                easing: 'bounce',
+                strokeWidth: 12,
+                text: {
+                    className: 'circle-progress-bar__lable',
+                },
+                from: {color: '#d75c2b', a:0},
+                to: {color: '#a7b51a', a:1},
+                // Set default step function for all animate calls
+                step: function(state, circle) {
+                    circle.path.setAttribute('stroke', state.color);
+                    $(circle.text).css({color:state.color});
+                    circle.setText( (circle.value() * 10).toFixed(1) )
+                },
+            });
+
+            bar.animate(value);  // Number from 0.0 to 1.0
+        }
+    }
+
+    initProgressBarCircle('.js-circle-progress-bar-final', 0.95);
+    initProgressBarCircle('.js-circle-progress-bar-review-1', 0.88);
+    initProgressBarCircle('.js-circle-progress-bar-review-2', 0.93);
+    initProgressBarCircle('.js-circle-progress-bar-review-3', 0.97);
+    initProgressBarCircle('.js-circle-progress-bar-review-4', 0.95);
+    initProgressBarCircle('.js-circle-progress-bar-review-5', 0.98);
+    initProgressBarCircle('.js-circle-progress-bar-review-6', 0.95);
+
+    // show/hide reviews
+    $('.review__more').on('click', function () {
+        $(this).hide();
+        $(this).closest('.review').addClass('review--show');
+    });
+
+    $('.review__button-hide-more').on('click', function () {
+        let review = $(this).closest('.review');
+        review.removeClass('review--show');
+        review.find('.review__more').show();
     });
 
 }); // end ready

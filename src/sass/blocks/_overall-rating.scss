@@ -1,0 +1,35 @@
+.overall-rating {
+    padding-top: 70px;
+}
+
+.overall-rating__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.overall-rating__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.overall-rating__box {
+    display: flex;
+}
+
+.overall-rating__left {
+    flex-shrink: 0;
+    width: 195px;
+    margin-right: 30px;
+}
+
+.overall-rating__right {
+    flex-grow: 1;
+}
+
+.overall-rating__indicators-list {
+    margin: 0;
+}

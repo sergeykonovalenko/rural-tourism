@@ -1,0 +1,15 @@
+.object-more {
+    display: none;
+}
+
+.object-more__content {
+    margin-bottom: 45px;
+}
+
+.object-more *:first-child {
+    margin-top: 0;
+}
+
+.object-more *:last-child {
+    margin-bottom: 0;
+}

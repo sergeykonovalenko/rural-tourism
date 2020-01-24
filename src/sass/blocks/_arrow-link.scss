@@ -1,9 +1,12 @@
 .arrow-link {
     position: relative;
     display: inline-block;
+    padding: 0;
     vertical-align: middle;
     font-size: 16px;
     color: $color-main;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 
     &::before {
@@ -40,6 +43,7 @@
     &:hover,
     &:focus {
         color: $color-secondary;
+        outline: none;
     }
 
     &:hover span,

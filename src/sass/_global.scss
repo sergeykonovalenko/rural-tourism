@@ -98,22 +98,23 @@ h1 {
 
 h2,
 .heading-2 {
-    font-size: 24px;
+    //font-size: 24px;
+    font-size: 30px;
 }
 
 h3,
 .heading-3 {
-    //font-size: 28px;
+    font-size: 24px;
 }
 
 h4,
 .heading-4 {
-    //font-size: 18px;
+    font-size: 18px;
 }
 
 .heading-2 {
 
-    &--extra-big {
+    &--extra {
         padding-bottom: 22px;
 
         & span {
@@ -140,32 +141,32 @@ h4,
         }
     }
 
-    &--extra-small {
-        overflow: hidden;
-
-        &::before,
-        &::after {
-            content: "";
-            position: relative;
-            display: inline-block;
-            width: 10%;
-            height: .4em;
-            margin-bottom: .15em;
-            vertical-align: middle;
-            border-top: 2px solid $color-secondary;
-            border-bottom: 2px solid $color-secondary;
-        }
-
-        &::before {
-            right: .5em;
-            margin-left: -10%;
-        }
-
-        &::after {
-            left: .5em;
-            margin-right: -10%;
-        }
-    }
+    //&--extra-small {
+    //    overflow: hidden;
+    //
+    //    &::before,
+    //    &::after {
+    //        content: "";
+    //        position: relative;
+    //        display: inline-block;
+    //        width: 10%;
+    //        height: .4em;
+    //        margin-bottom: .15em;
+    //        vertical-align: middle;
+    //        border-top: 2px solid $color-secondary;
+    //        border-bottom: 2px solid $color-secondary;
+    //    }
+    //
+    //    &::before {
+    //        right: .5em;
+    //        margin-left: -10%;
+    //    }
+    //
+    //    &::after {
+    //        left: .5em;
+    //        margin-right: -10%;
+    //    }
+    //}
 
     &--icon-right {
 
@@ -192,24 +193,79 @@ h4,
             height: 19px;
             background-image: url("img/bg/terms-of-placement.svg");
         }
+
+        &--rating::after {
+            width: 32px;
+            height: 30px;
+            background-image: url("img/bg/rating.svg");
+        }
+
+        &--location::after {
+            width: 35px;
+            height: 33px;
+            background-image: url("img/bg/location.svg");
+        }
+
+        &--how-to-get-there::after {
+            width: 166px;
+            height: 34px;
+            background-image: url("img/bg/sports-car.svg"),
+                              url("img/bg/bus.svg"),
+                              url("img/bg/tram.svg"),
+                              url("img/bg/plane.svg");
+            background-position: left center, 45px center, 87px center, 127px center;
+            background-size: 30px auto, 27px auto, 25px auto, 28px auto;
+        }
     }
 
-    &--top-icon {
-        padding-top: 55px;
-        background-repeat: no-repeat;
-        background-position: center top;
-        //&::before {
-        //    content: "";
-        //    display: block;
-        //    margin: 0 auto 10px;
-        //    background-repeat: no-repeat;
-        //    background-position: 0 0;
-        //    background-size: contain;
-        //}
-        //
-        &--guest-houses {
-            background-size: 45px 43px;
-            background-image: url("img/bg/guest-houses.svg");
+    //&--top-icon {
+    //    padding-top: 55px;
+    //    background-repeat: no-repeat;
+    //    background-position: center top;
+    //
+    //    &--guest-houses {
+    //        background-size: 45px 43px;
+    //        background-image: url("img/bg/guest-houses.svg");
+    //    }
+    //
+    //    &--guest-rooms {
+    //        background-size: 47px;
+    //        background-image: url("img/bg/guest-rooms.svg");
+    //    }
+    //
+    //    &--guest-rooms-2 {
+    //        background-size: 45px;
+    //        background-image: url("img/bg/guest-rooms-2.svg");
+    //    }
+    //}
+}
+
+.heading-3 {
+
+    &--extra {
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: 10%;
+            height: .4em;
+            margin-bottom: .15em;
+            vertical-align: middle;
+            border-top: 2px solid $color-secondary;
+            border-bottom: 2px solid $color-secondary;
+        }
+
+        &::before {
+            right: .5em;
+            margin-left: -10%;
+        }
+
+        &::after {
+            left: .5em;
+            margin-right: -10%;
         }
     }
 }

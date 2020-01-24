@@ -1,5 +1,8 @@
 .host {
     position: relative;
+    display: block;
+    width: 360px;
+    color: $color-main;
 }
 
 .host__img-box {
@@ -7,6 +10,7 @@
 }
 
 .host__img {
+    width: 100%;
     border-radius: 7px;
 }
 

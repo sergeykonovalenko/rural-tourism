@@ -21,6 +21,7 @@
     height: 230px;
     margin: 0 auto 34px;
     border-radius: 50%;
+    background-color: $color-secondary--darkest;
     overflow: hidden;
 }
 
@@ -43,6 +44,7 @@
 
 .slider-interesting__txt h3 {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .slider-interesting__txt p {

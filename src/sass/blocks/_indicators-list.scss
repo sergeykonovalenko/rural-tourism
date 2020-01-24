@@ -1,0 +1,38 @@
+.indicators-list {
+    padding: 0;
+    list-style: none;
+}
+
+.indicators-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.indicators-list__title {
+    display: block;
+    flex-shrink: 0;
+    width: 210px;
+    margin-right: 30px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.indicators-list__progress-bar {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: 4px;
+}
+
+.indicators-list__label {
+    flex-shrink: 0;
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 18px;
+}

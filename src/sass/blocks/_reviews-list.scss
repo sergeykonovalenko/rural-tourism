@@ -1,0 +1,28 @@
+.reviews-list {
+    padding: 0;
+    list-style: none;
+}
+
+.reviews-list__item {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d3d3b9;
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    &:nth-child(3) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+
+        .reviews-list--show-all & {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #d3d3b9;
+        }
+    }
+}

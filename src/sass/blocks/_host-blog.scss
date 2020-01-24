@@ -14,7 +14,6 @@
 
 .host-blog__left {
     flex-shrink: 0;
-    width: 360px;
     margin-right: 50px;
 }
 
@@ -43,7 +42,7 @@
 }
 
 .host-blog__posts {
-    @include reset-list;
+    margin: 0;
 }
 
 .host-blog__wp-pagenavi {

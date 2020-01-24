@@ -1,0 +1,28 @@
+.guest-reviews {
+    padding-top: 70px;
+}
+
+.guest-reviews__head {
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.guest-reviews__title {
+    margin: 0;
+}
+
+.guest-reviews__btn-leave-feedback {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.guest-reviews__list {
+    margin: 0 0 40px 0;
+}
+
+.guest-reviews__button-more-box {
+    margin: 0;
+    text-align: center;
+}
