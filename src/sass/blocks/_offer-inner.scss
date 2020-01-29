@@ -58,8 +58,17 @@
 }
 
 .webp .offer-inner--area {
-    background-position: center 90%;
     background-image: url("img/bg/area.webp");
+}
+
+/***** offer-inner--region *****/
+.no-js .offer-inner--region,
+.no-webp .offer-inner--region {
+    background-image: url("img/bg/region.jpg");
+}
+
+.webp .offer-inner--region {
+    background-image: url("img/bg/region.webp");
 }
 
 .offer-inner__title {
@@ -76,4 +85,8 @@
     border-radius: 7px;
     box-decoration-break: clone;
     text-shadow: 0 2px 15px rgba(23, 26, 31, .25);
+}
+
+.offer-inner__regions-box {
+    margin-top: 50px;
 }
