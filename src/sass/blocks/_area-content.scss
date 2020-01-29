@@ -1,0 +1,31 @@
+.area-content {
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+.area-content__map-and-objects {
+    display: flex;
+}
+
+.area-content__map {
+    flex-shrink: 0;
+    width: 460px;
+    height: 850px;
+    margin-right: 50px;
+}
+
+.area-content__objects {
+    flex-grow: 1;
+}
+
+.area-content__actions-posts {
+    margin-bottom: 30px;
+}
+
+.area-content__objects-list {
+    margin: 0;
+}
+
+.area-content__wp-pagenavi {
+    justify-content: flex-start;
+}

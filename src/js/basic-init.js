@@ -62,6 +62,17 @@ $(document).ready(function () {
         $grid.masonry('layout');
     });
 
+    let $masonryGallery = $('.masonry-gallery').masonry({
+        itemSelector: '.masonry-gallery__item',
+        columnWidth: '.masonry-gallery__item--small',
+        gutter: 10,
+    });
+
+    // layout Masonry after each image loads
+    $masonryGallery.imagesLoaded().progress( function() {
+        $masonryGallery.masonry('layout');
+    });
+
     // smooth page scrolling
     $('.scrollto').click(function () {
         let elementClick = '#' + $(this).attr('href').split('#')[1];

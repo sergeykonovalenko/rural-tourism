@@ -23,22 +23,22 @@
 
 .content h2,
 .content .heading-2 {
-    //margin-top: 46px;
-    //margin-bottom: 23px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     //font-size: 38px;
 }
 
 .content h3,
 .content .heading-3 {
-    //margin-top: 46px;
-    //margin-bottom: 13px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     //font-size: 28px;
 }
 
 .content h4,
 .content .heading-4 {
-    //margin-top: 32px;
-    //margin-bottom: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     //font-size: 18px;
 }
 
@@ -77,7 +77,7 @@
     }
 }
 
-.content a:not(.arrow-link):not(.posts-list-extra__img-link):not(.gallery__link):not(.about-section__button) {
+.content a:not(.arrow-link):not(.posts-list-extra__img-link):not(.gallery__link):not(.about-section__button):not(.light-box-img):not(.masonry-gallery__link) {
     color: $color-secondary;
     border-bottom: 1px solid $color-secondary;
     transition: all .15s ease-in;

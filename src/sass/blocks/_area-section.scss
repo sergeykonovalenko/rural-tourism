@@ -1,0 +1,13 @@
+.area-section {
+    padding-top: 70px;
+
+    &--with-border {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #d7d7d7;
+    }
+}
+
+.area-section h2 {
+    clear: none;
+    margin-top: 0;
+}

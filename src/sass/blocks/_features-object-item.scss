@@ -1,0 +1,47 @@
+.features-object-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.features-object-item__item {
+    position: relative;
+    margin-bottom: 7px;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 1.25;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transform: translate(0, -50%);
+    }
+
+    &--location::before {
+        background-image: url("img/bg/placeholder-filled-point.svg");
+    }
+
+    &--accommodation-options::before {
+        background-image: url("img/bg/home.svg");
+    }
+
+    &--people::before {
+        background-image: url("img/bg/person.svg");
+    }
+}
+
+.features-object-item__item b {
+    font-weight: 700;
+}

@@ -5,6 +5,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    &--with-filter {
+        padding-top: 300px;
+    }
 }
 
 /***** offer-inner--article *****/
@@ -45,6 +49,17 @@
 
 .webp .offer-inner--host-blog {
     background-image: url("img/bg/host-blog-offer.webp");
+}
+
+/***** offer-inner--area *****/
+.no-js .offer-inner--area,
+.no-webp .offer-inner--area {
+    background-image: url("img/bg/area.jpg");
+}
+
+.webp .offer-inner--area {
+    background-position: center 90%;
+    background-image: url("img/bg/area.webp");
 }
 
 .offer-inner__title {
