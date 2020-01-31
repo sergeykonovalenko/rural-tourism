@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -69,13 +70,13 @@
                 </ul><!-- / .language-switch -->
                 <ul class="main-header__user-navigation user-navigation">
                     <li class="user-navigation__item">
-                        <a class="user-navigation__link" href="#">
+                        <a class="user-navigation__link btn-modal" href="#js-modal-order">
                             <span>Зарегистрировать свой объект</span>
                             <svg width="19" height="17" viewBox="0 0 27 23.9" fill="#a7b51a" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" xml:space="preserve"><path d="M3.7 23.3s0 .6.6.6h6.8v-5.6s-.1-.9.8-.9h2.8c1.1 0 1 .9 1 .9v5.6h6.7c.7 0 .7-.8.7-.8V12.9l-9.4-8.4-10 8.4v10.4z"/><path class="st0" d="M0 12.1s.8 1.6 2.7 0l11-9.3L24.1 12c2.1 1.5 2.9 0 2.9 0L13.7 0 0 12.1zm23.8-9.4h-2.6V6l2.6 2.2z"/></svg>
                         </a>
                     </li>
                     <li class="user-navigation__item">
-                        <a class="user-navigation__link" href="#">
+                        <a class="user-navigation__link btn-modal" href="#js-modal-login">
                             <span>Войти в аккаунт</span>
                             <svg width="14" height="17" viewBox="0 0 217.5 258.8" fill="#a7b51a" xmlns="http://www.w3.org/2000/svg"><circle cx="108.8" cy="60" r="60"/><path d="M108.8 150C48.7 150 0 198.7 0 258.8h217.5c0-60.1-48.7-108.8-108.7-108.8z"/></svg>
                         </a>
@@ -264,6 +265,398 @@
         </div>
     </footer><!-- / .main-footer -->
 
+    <!-- Modal login -->
+    <div class="modal-login modal-common" id="js-modal-login" style="display: none">
+        <div class="modal-login__box">
+            <div class="modal-login__left modal-triggers">
+                <p class="modal-triggers__title">Быть хозяином</p>
+                <ul class="modal-triggers__list">
+                    <li class="modal-triggers__item">Удобный сервис для Вашего продивижения</li>
+                    <li class="modal-triggers__item">Простое администрирование</li>
+                    <li class="modal-triggers__item">Хорошие советы и помощь</li>
+                </ul>
+            </div><!-- / .modal-triggers -->
+            <form class="modal-login__right form" action="#" method="post">
+                <fieldset class="form__field-group field-group">
+                    <legend class="field-group__title">Вход</legend>
+                    <ul class="field-group__fields-list fields-list">
+                        <li class="fields-list__item fields-list__item--full-width">
+                            <label class="visually-hidden" for="modal-login-email">E-mail</label>
+                            <input class="fields-list__field" id="modal-login-email" type="email" name="email" placeholder="E-mail">
+                        </li>
+                        <li class="fields-list__item fields-list__item--full-width">
+                            <label class="visually-hidden" for="modal-login-password">Пароль</label>
+                            <input class="fields-list__field" id="modal-login-password" type="password" name="password" placeholder="Пароль">
+                        </li>
+                    </ul>
+                    <a class="modal-login__forgot-password" href="#">Забыли пароль</a>
+                </fieldset><!-- / .field-group -->
+                <button class="form__button modal-login__button button">Войти</button>
+            </form><!-- / .form -->
+        </div>
+    </div><!-- / .modal-login -->
+
+    <!-- Modal review -->
+    <div class="modal-review modal-common" id="js-modal-review" style="display: none">
+        <form class="form" action="#" method="post">
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Мой отзыв</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-review-message-object-description">Дать полное описание объекта. Регион / район / объект / дом, номер или комната*</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-review-message-object-description" name="object-description" placeholder="Дать полное описание объекта. Регион / район / объект / дом, номер или комната*"></textarea>
+                    </li>
+                </ul>
+            </fieldset><!-- / .field-group -->
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">О вас и вашем отдыхе</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-surname">Фамилия*</label>
+                        <input class="fields-list__field" id="modal-review-surname" type="text" name="surname" placeholder="Фамилия*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-name">Имя*</label>
+                        <input class="fields-list__field" id="modal-review-name" type="text" name="name" placeholder="Имя*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-age">Возраст*</label>
+                        <input class="fields-list__field" id="modal-review-age" type="text" name="age" placeholder="Возраст*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-phone">Телефон*</label>
+                        <input class="fields-list__field" id="modal-review-phone" type="tel" name="phone" placeholder="Телефон*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-email">E-mail*</label>
+                        <input class="fields-list__field" id="modal-review-email" type="email" name="email" placeholder="E-mail*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-holiday-start-date">Начало отдыха*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-review-holiday-start-date" type="text" name="holiday-start-date" autocomplete="off" placeholder="Начало отдыха*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-holiday-end-date">Конец отдыха*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-review-holiday-end-date" type="text" name="holiday-end-date" autocomplete="off" placeholder="Конец отдыха*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-adults">Взрослые</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-adults" name="adults">
+                                <option disabled selected>Взрослые</option>
+                                <option value="adults-1">1</option>
+                                <option value="adults-2">2</option>
+                                <option value="adults-3">3</option>
+                                <option value="adults-4">4</option>
+                                <option value="adults-5">5</option>
+                                <option value="adults-6">6</option>
+                                <option value="adults-7">7</option>
+                                <option value="adults-8">8</option>
+                                <option value="adults-9">9</option>
+                                <option value="adults-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-children">Дети</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-children" name="children">
+                                <option disabled selected>Дети</option>
+                                <option value="no-children">Нет</option>
+                                <option value="children-1">1</option>
+                                <option value="children-2">2</option>
+                                <option value="children-3">3</option>
+                                <option value="children-4">4</option>
+                                <option value="children-5">5</option>
+                                <option value="children-6">6</option>
+                                <option value="children-7">7</option>
+                                <option value="children-8">8</option>
+                                <option value="children-9">9</option>
+                                <option value="children-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-animals">Животные</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-animals" name="animals">
+                                <option disabled selected>Животные</option>
+                                <option value="no-animals">Нет</option>
+                                <option value="cat">Кошка</option>
+                                <option value="dog">Собака</option>
+                                <option value="parrot">Попугай</option>
+                                <option value="horek">Хорек</option>
+                                <option value="hamster">Хомяк</option>
+                                <option value="snakes">Змей</option>
+                                <option value="iguana">Игуана</option>
+                                <option value="turtles">Черепаха</option>
+                                <option value="aquarium-fish">Аквариумные рыбки</option>
+                                <option value="spiders">Пауки</option>
+                            </select>
+                        </p>
+                    </li>
+                </ul>
+                <div class="field-group__info">
+                    <p>
+                        * Поля обязательные для заполнения.<br>
+                        Контактные данные, телефон и е-mail не отражаются в отзыве и необходимы для подтверждения того,
+                        что Вы действительно проводили отпуск в этом месте в указанное время.
+                    </p>
+                </div>
+                <div class="field-group__agreement agreement">
+                    <input class="agreement__field visually-hidden" id="modal-review-agreement" type="checkbox" name="agreement">
+                    <label class="agreement__label" for="modal-review-agreement">Даю согласие на обработку персональных данных</label>
+                </div><!-- / .agreement -->
+            </fieldset><!-- / .field-group -->
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Текст отзыва</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-review-review">Текст отзыва*</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-review-review" name="review" placeholder="Текст отзыва*"></textarea>
+                    </li>
+                </ul>
+            </fieldset><!-- / .field-group -->
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title field-group__title--with-icon field-group__title--with-icon--rating">Ваши оценки от 0 до 10</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-rating-housing">Жилье</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-rating-housing" name="rating-housing">
+                                <option disabled selected>Жилье</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-rating-nutrition">Питание</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-rating-nutrition" name="rating-nutrition">
+                                <option disabled selected>Питание</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-review-rating-entertainment">Развлечения</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-rating-entertainment" name="rating-entertainment">
+                                <option disabled selected>Развлечения</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-rating-location">Местоположение</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-rating-location" name="rating-location">
+                                <option disabled selected>Местоположение</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-review-rating-service">Сервис и дружелюбие</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-review-rating-service" name="rating-service">
+                                <option disabled selected>Сервис и дружелюбие</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                </ul>
+                <div class="field-group__info">
+                    <p>Отзыв будет доступен на сайте после модерации администрацией.</p>
+                    <p>
+                        Администрация сайта оставляет за собой право отказать в публикации отзыва не относящегося к указанному
+                        объекту сельского туризма, содержащего преднамеренно искаженную информацию, оскорбления и нецензурные
+                        выражения.
+                    </p>
+                </div>
+            </fieldset><!-- / .field-group -->
+            <p class="form__button-box">
+                <button class="form__button button button--with-icon button--with-icon--plus-icon">Опубликовать отзыв</button>
+            </p>
+        </form><!-- / .form -->
+    </div><!-- / .modal-review -->
+
+    <!-- Modal order -->
+    <div class="modal-order modal-common" id="js-modal-order" style="display: none">
+        <form class="form" action="#" method="post">
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Оставить заявку</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-order-message-object-description">Дать полное описание объекта. Регион / район / объект / дом, номер или комната*</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-order-message-object-description" name="object-description" placeholder="Дать полное описание объекта. Регион / район / объект / дом, номер или комната*"></textarea>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-arrival-date">Дата заезда*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-order-arrival-date" type="text" name="arrival-date" autocomplete="off" placeholder="Дата заезда*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-date-departure">Дата выезда*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-order-date-departure" type="text" name="date-departure" autocomplete="off" placeholder="Дата выезда*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-adults">Взрослые*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-adults" name="adults">
+                                <option disabled selected>Взрослые*</option>
+                                <option value="adults-1">1</option>
+                                <option value="adults-2">2</option>
+                                <option value="adults-3">3</option>
+                                <option value="adults-4">4</option>
+                                <option value="adults-5">5</option>
+                                <option value="adults-6">6</option>
+                                <option value="adults-7">7</option>
+                                <option value="adults-8">8</option>
+                                <option value="adults-9">9</option>
+                                <option value="adults-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-children">Дети*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-children" name="children">
+                                <option disabled selected>Дети*</option>
+                                <option value="no-children">Нет</option>
+                                <option value="children-1">1</option>
+                                <option value="children-2">2</option>
+                                <option value="children-3">3</option>
+                                <option value="children-4">4</option>
+                                <option value="children-5">5</option>
+                                <option value="children-6">6</option>
+                                <option value="children-7">7</option>
+                                <option value="children-8">8</option>
+                                <option value="children-9">9</option>
+                                <option value="children-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-animals">Животные*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-animals" name="animals">
+                                <option disabled selected>Животные*</option>
+                                <option value="no-animals">Нет</option>
+                                <option value="cat">Кошка</option>
+                                <option value="dog">Собака</option>
+                                <option value="parrot">Попугай</option>
+                                <option value="horek">Хорек</option>
+                                <option value="hamster">Хомяк</option>
+                                <option value="snakes">Змей</option>
+                                <option value="iguana">Игуана</option>
+                                <option value="turtles">Черепаха</option>
+                                <option value="aquarium-fish">Аквариумные рыбки</option>
+                                <option value="spiders">Пауки</option>
+                            </select>
+                        </p>
+                    </li>
+                </ul>
+            </fieldset><!-- / .field-group -->
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Введите ваши данные</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-surname">Фамилия*</label>
+                        <input class="fields-list__field" id="modal-order-surname" type="text" name="surname" placeholder="Фамилия*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-name">Имя*</label>
+                        <input class="fields-list__field" id="modal-order-name" type="text" name="name" placeholder="Имя*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-middle-name">Отчество*</label>
+                        <input class="fields-list__field" id="modal-order-middle-name" type="text" name="middle-name" placeholder="Отчество*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-phone">Телефон*</label>
+                        <input class="fields-list__field" id="modal-order-phone" type="tel" name="phone" placeholder="Телефон*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-email">E-mail*</label>
+                        <input class="fields-list__field" id="modal-order-email" type="email" name="email" placeholder="E-mail*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-review-comments-on-the-application">Комментарии к заявке</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-review-comments-on-the-application" name="comments-on-the-application" placeholder="Комментарии к заявке"></textarea>
+                    </li>
+                </ul>
+                <div class="field-group__info">
+                    <p>* Поля обязательные для заполнения.</p>
+                </div>
+                <div class="field-group__agreement agreement">
+                    <input class="agreement__field visually-hidden" id="modal-order-agreement" type="checkbox" name="agreement">
+                    <label class="agreement__label" for="modal-order-agreement">Даю согласие на обработку персональных данных</label>
+                </div><!-- / .agreement -->
+            </fieldset><!-- / .field-group -->
+            <p class="form__button-box">
+                <button class="form__button button button--extra">Забронировать</button>
+            </p>
+        </form><!-- / .form -->
+    </div><!-- / .modal-order -->
+
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Progress Bar -->
@@ -282,6 +675,10 @@
     <script src="js/jquery.mb.browser.js"></script>
     <!-- jQuery validate -->
     <script src="js/jquery.validate.min.js"></script>
+    <!-- Moment -->
+    <script src="js/moment.min.js"></script>
+    <!-- Date Range Picker -->
+    <script src="js/daterangepicker.js"></script>
     <!-- Basic Init -->
     <script src="js/basic-init.js"></script>
 </body>

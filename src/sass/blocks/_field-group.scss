@@ -1,0 +1,62 @@
+.field-group {
+    border: none;
+    padding: 0;
+}
+
+.field-group__title {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    appearance: none;
+
+    &--with-icon {
+
+        &::after {
+            content: "";
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: 15px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+
+        &--rating::after {
+            width: 29px;
+            height: 28px;
+            background-image: url("img/bg/rating.svg");
+        }
+    }
+}
+
+.field-group__fields-list {
+    margin: -15px -15px 15px 0;
+}
+
+.field-group__info {
+    margin-bottom: 15px;
+}
+
+.field-group__info p {
+    margin: 8px 0;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.field-group__info *:first-child {
+    margin-top: 0;
+}
+
+.field-group__info *:last-child {
+    margin-bottom: 0;
+}
+
+.field-group *:last-child {
+    margin-bottom: 0;
+}
+
+

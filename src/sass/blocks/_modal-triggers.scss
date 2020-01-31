@@ -1,0 +1,35 @@
+.modal-triggers {
+    font-weight: 500;
+}
+
+.modal-triggers__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.modal-triggers__list {
+    @include reset-list;
+}
+
+.modal-triggers__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 14px;
+        height: 11px;
+        background: url("img/bg/checkbox--green.svg") no-repeat 0 0;
+        background-size: contain;
+    }
+}

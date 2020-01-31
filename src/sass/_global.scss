@@ -46,19 +46,29 @@ picture {
 }
 
 input,
-select,
+select:not(.monthselect):not(.yearselect):not(.sort-posts__field),
 textarea {
     display: block;
     width: 100%;
     padding: 16px 25px;
     //font-weight: 600;
+    //font-style: italic;
     font-size: 13px;
+    line-height: 1.25;
     font-family: inherit;
     color: $color-main;
     background-color: #fff;
     border-radius: 25px;
     border: 1px solid #c2c2c2;
     transition: all .15s ease-in;
+
+    &.error {
+        border-color: $color-warning;
+
+        &:focus {
+            box-shadow: 0 0 10px rgba(251, 82, 88, .7);
+        }
+    }
 
     &:hover,
     &:focus {
@@ -75,7 +85,7 @@ textarea {
 }
 
 ::placeholder {
-    color: #5b5b5b;
+    color: #7c7c7c;
 }
 
 h1,

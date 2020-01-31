@@ -6,6 +6,17 @@ $(document).ready(function () {
         backFocus: false,
     });
 
+    $('.btn-modal').fancybox({
+        touch : false,
+        backFocus : false,
+        btnTpl: {
+            smallBtn: `
+                <button class="modal-common__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                </button>`
+        },
+    });
+
     // offer slider
     $('.offer-slider').slick({
         dots: true,
@@ -236,5 +247,149 @@ $(document).ready(function () {
         review.removeClass('review--show');
         review.find('.review__more').show();
     });
+
+    // init date range picker
+    let datePickerField = $('.js-date-range-picker');
+
+    datePickerField.daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: false,
+        //drops: 'up',
+        locale: {
+            format: 'MM/DD/YYYY',
+            separator: " - ",
+            cancelLabel: 'Отменить',
+            applyLabel: 'Подтвердить',
+            fromLabel: 'От',
+            toLabel: 'До',
+            customRangeLabel: 'Свой',
+            weekLabel: 'W',
+            daysOfWeek: [
+                'Вс',
+                'Пн',
+                'Вт',
+                'Ср',
+                'Чт',
+                'Пт',
+                'Сб'
+            ],
+            monthNames: [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+            firstDay: 1
+        }
+    });
+
+    datePickerField.on('apply.daterangepicker', function(ev, picker) {
+        $(this).val( picker.startDate.format('DD/MM/YYYY') );
+    });
+
+    /*datePickerField.on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });*/
+
+    //
+    $('.steps__form').validate({
+        rules: {
+            'customer[first_name]': 'required',
+            'customer[last_name]': 'required',
+            'customer[email]': {
+                required: true,
+                email: true
+            },
+            'customer[password]': {
+                required: true,
+                minlength: 5,
+            },
+            'customer[confirmPassword]': {
+                required: true,
+                minlength: 5,
+                equalTo: '#identification-last-confirm-password'
+            },
+        },
+        messages: {
+            'customer[first_name]': 'Это поле необходимо заполнить.',
+            'customer[last_name]': 'Это поле необходимо заполнить.',
+            'customer[email]': {
+                required: 'Это поле необходимо заполнить.',
+                email: 'Пожалуйста, введите корректный адрес электронной почты.'
+            },
+            'customer[password]': {
+                required: 'Это поле необходимо заполнить.',
+                minlength: 'Пожалуйста, введите не меньше {0} символов.'
+            },
+            'customer[confirmPassword]': {
+                required: 'Это поле необходимо заполнить.',
+                minlength: 'Пожалуйста, введите не меньше {0} символов.',
+                equalTo: 'Пожалуйста, введите такой же пароль.'
+            },
+        },
+    });
+
+    // form validation
+    $('.form').each(function () {
+        $(this).validate({
+            rules: {
+                'email': {
+                    required: true,
+                    email: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 3,
+                },
+                'object-description': 'required',
+                'surname': 'required',
+                'name': 'required',
+                'middle-name': 'required',
+                'age': 'required',
+                'phone': 'required',
+                'holiday-start-date': 'required',
+                'holiday-end-date': 'required',
+                'agreement': 'required',
+                'review': 'required',
+                'arrival-date': 'required',
+                'date-departure': 'required',
+                'adults': 'required',
+                'children': 'required',
+                'animals': 'required',
+            },
+            messages: {
+                'email': '',
+                'password': '',
+                'object-description': '',
+                'surname': '',
+                'name': '',
+                'middle-name': '',
+                'age': '',
+                'phone': '',
+                'holiday-start-date': '',
+                'holiday-end-date': '',
+                'agreement': '',
+                'review': '',
+                'arrival-date': '',
+                'date-departure': '',
+                'adults': '',
+                'children': '',
+                'animals': '',
+            },
+        });
+
+    });
+
+    // masked input
+    $('input[type="tel"]').mask("+7 (999) 999 99 99");
 
 }); // end ready

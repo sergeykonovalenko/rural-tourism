@@ -1,0 +1,23 @@
+.form {
+
+}
+
+.form__field-group {
+    margin: 0 0 30px 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__button-box {
+    margin: 0;
+    text-align: center;
+}
+
+.form__button {
+
+    &:focus {
+        outline: none;
+    }
+}
