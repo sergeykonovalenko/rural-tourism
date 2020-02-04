@@ -33,3 +33,22 @@
 .overall-rating__indicators-list {
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .overall-rating__box {
+        display: block;
+    }
+
+    .overall-rating__left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .final-grade__title {
+        text-align: center;
+    }
+
+    .circle-progress-bar {
+        margin: 0 auto;
+    }
+}

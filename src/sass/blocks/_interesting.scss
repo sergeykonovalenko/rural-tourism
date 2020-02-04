@@ -6,3 +6,9 @@
     margin-top: 0;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 768px) {
+    .interesting__slider {
+        margin: 0 auto;
+    }
+}

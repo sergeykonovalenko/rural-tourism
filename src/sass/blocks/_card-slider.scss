@@ -65,3 +65,22 @@
 .card-slider .slick-active button {
     background-color: $color-secondary;
 }
+
+@media screen and (max-width: 1200px) {
+    .card-slider {
+        width: 780px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card-slider {
+        width: 100%;
+    }
+}
+
+// additional
+@media screen and (width: 992px) {
+    .card-slider {
+        width: 780px;
+    }
+}

@@ -1,6 +1,5 @@
 .user-navigation {
     display: flex;
-    flex-wrap: wrap;
     padding: 0;
     list-style: none;
 }
@@ -21,11 +20,6 @@
     line-height: 1.25;
     color: $color-main;
 
-    //&:hover,
-    //&:focus {
-    //
-    //}
-
     &:hover span::after,
     &:focus span::after {
         transform: scale(1);
@@ -35,6 +29,7 @@
 
 .user-navigation__link span {
     position: relative;
+    margin-right: 15px;
     transition: all .15s ease-in;
 
     &::after {
@@ -53,16 +48,29 @@
 }
 
 .user-navigation__link svg {
-    margin-left: 15px;
     transition: all .15s ease-in;
 }
 
 .user-navigation__icon {
-    //display: flex;
-    //align-items: center;
-    //
-    //&:hover svg {
-    //  fill: #383d08;
-    //}
+
 }
 
+@media screen and (max-width: 1200px) {
+    .user-navigation__item {
+        margin-right: 0;
+    }
+
+    .user-navigation__link {
+        padding: 0 15px;
+    }
+
+    .user-navigation__link span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .user-navigation__link {
+        padding: 0 10px;
+    }
+}

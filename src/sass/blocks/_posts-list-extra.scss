@@ -61,3 +61,20 @@
     height: 2px;
     background-color: $color-secondary;
 }
+
+@media screen and (max-width: 576px) {
+    .posts-list-extra__img-link {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .posts-list-extra__img {
+        height: auto;
+    }
+
+    .posts-list-extra__line {
+        width: 100%;
+    }
+}

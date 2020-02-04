@@ -45,3 +45,35 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .object-nav__list {
+        padding: 10px 0;
+    }
+
+    .object-nav__list li {
+        flex-grow: 0;
+        width: calc(100% / 3);
+    }
+
+    .object-nav__list a {
+        padding: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .object-nav__list li {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .object-nav__list li {
+        width: 100%;
+    }
+
+    .object-nav__list a {
+        text-align: center;
+    }
+}

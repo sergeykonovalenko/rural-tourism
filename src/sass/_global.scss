@@ -46,13 +46,11 @@ picture {
 }
 
 input,
-select:not(.monthselect):not(.yearselect):not(.sort-posts__field),
+select,
 textarea {
     display: block;
     width: 100%;
     padding: 16px 25px;
-    //font-weight: 600;
-    //font-style: italic;
     font-size: 13px;
     line-height: 1.25;
     font-family: inherit;
@@ -61,6 +59,14 @@ textarea {
     border-radius: 25px;
     border: 1px solid #c2c2c2;
     transition: all .15s ease-in;
+
+    &.monthselect,
+    &.yearselect {
+        display: inline;
+        color: $color-main;
+        border-radius: 0;
+        border: 1px solid rgb(169, 169, 169);
+    }
 
     &.error {
         border-color: $color-warning;
@@ -101,10 +107,10 @@ h4,
     text-align: center;
 }
 
-h1 {
-    //font-weight: 700;
-    //font-size: 48px;
-}
+//h1 {
+//    font-weight: 700;
+//    font-size: 48px;
+//}
 
 h2,
 .heading-2 {
@@ -126,128 +132,79 @@ h4,
 
     &--extra {
         padding-bottom: 22px;
+    }
+}
 
-        & span {
-            position: relative;
+.heading-2--extra span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                height: 3px;
-                background-color: $color-secondary;
-            }
-
-            &::before {
-                bottom: -16px;
-                width: 50%;
-            }
-
-            &::after {
-                bottom: -26px;
-                width: 30%;
-            }
-        }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 3px;
+        background-color: $color-secondary;
     }
 
-    //&--extra-small {
-    //    overflow: hidden;
-    //
-    //    &::before,
-    //    &::after {
-    //        content: "";
-    //        position: relative;
-    //        display: inline-block;
-    //        width: 10%;
-    //        height: .4em;
-    //        margin-bottom: .15em;
-    //        vertical-align: middle;
-    //        border-top: 2px solid $color-secondary;
-    //        border-bottom: 2px solid $color-secondary;
-    //    }
-    //
-    //    &::before {
-    //        right: .5em;
-    //        margin-left: -10%;
-    //    }
-    //
-    //    &::after {
-    //        left: .5em;
-    //        margin-right: -10%;
-    //    }
-    //}
-
-    &--icon-right {
-
-        &::after {
-            content: "";
-            flex-shrink: 0;
-            display: inline-block;
-            vertical-align: middle;
-            margin-top: -6px;
-            margin-left: 15px;
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: contain;
-        }
-        
-        &--gallery::after {
-            width: 28px;
-            height: 23px;
-            background-image: url("img/bg/photo-camera.svg");
-        }
-
-        &--terms-of-placement::after {
-            width: 30px;
-            height: 19px;
-            background-image: url("img/bg/terms-of-placement.svg");
-        }
-
-        &--rating::after {
-            width: 32px;
-            height: 30px;
-            background-image: url("img/bg/rating.svg");
-        }
-
-        &--location::after {
-            width: 35px;
-            height: 33px;
-            background-image: url("img/bg/location.svg");
-        }
-
-        &--how-to-get-there::after {
-            width: 166px;
-            height: 34px;
-            background-image: url("img/bg/sports-car.svg"),
-                              url("img/bg/bus.svg"),
-                              url("img/bg/tram.svg"),
-                              url("img/bg/plane.svg");
-            background-position: left center, 45px center, 87px center, 127px center;
-            background-size: 30px auto, 27px auto, 25px auto, 28px auto;
-        }
+    &::before {
+        bottom: -16px;
+        width: 50%;
     }
 
-    //&--top-icon {
-    //    padding-top: 55px;
-    //    background-repeat: no-repeat;
-    //    background-position: center top;
-    //
-    //    &--guest-houses {
-    //        background-size: 45px 43px;
-    //        background-image: url("img/bg/guest-houses.svg");
-    //    }
-    //
-    //    &--guest-rooms {
-    //        background-size: 47px;
-    //        background-image: url("img/bg/guest-rooms.svg");
-    //    }
-    //
-    //    &--guest-rooms-2 {
-    //        background-size: 45px;
-    //        background-image: url("img/bg/guest-rooms-2.svg");
-    //    }
-    //}
+    &::after {
+        bottom: -26px;
+        width: 30%;
+    }
+}
+
+.heading-2__icon {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -6px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    &--gallery {
+        width: 28px;
+        height: 23px;
+        background-image: url("img/bg/photo-camera.svg");
+    }
+
+    &--terms-of-placement {
+        width: 30px;
+        height: 19px;
+        margin-top: -4px;
+        background-image: url("img/bg/terms-of-placement.svg");
+    }
+
+    &--rating {
+        width: 32px;
+        height: 30px;
+        background-image: url("img/bg/rating.svg");
+    }
+
+    &--location {
+        width: 35px;
+        height: 33px;
+        background-image: url("img/bg/location.svg");
+    }
+
+    &--how-to-get-there {
+        width: 166px;
+        height: 34px;
+        background-image: url("img/bg/sports-car.svg"),
+                          url("img/bg/bus.svg"),
+                          url("img/bg/tram.svg"),
+                          url("img/bg/plane.svg");
+        background-position: left center, 45px center, 87px center, 127px center;
+        background-size: 30px auto, 27px auto, 25px auto, 28px auto;
+    }
 }
 
 .heading-3 {
@@ -276,6 +233,17 @@ h4,
         &::after {
             left: .5em;
             margin-right: -10%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .heading-2--extra span {
+
+        &::before,
+        &::after {
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
 }

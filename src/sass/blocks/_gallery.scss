@@ -21,35 +21,6 @@
     &:nth-child(n + 4) {
         margin-top: 10px;
     }
-
-
-
-    //position: relative;
-    //display: flex;
-    //
-    //&::after {
-    //    content: "";
-    //    position: absolute;
-    //    top: 0;
-    //    left: 0;
-    //    width: 100%;
-    //    height: 100%;
-    //    background: rgba(0, 0, 0, .5) url("img/bg/magnifying-glass.svg") no-repeat center;
-    //    background-size: 30px 30px;
-    //    opacity: 0;
-    //    transition-duration: .3s;
-    //    transition-timing-function: ease-out;
-    //    transition-property: opacity, transform, filter;
-    //    pointer-events: none;
-    //}
-    //
-    //&:hover::after {
-    //    opacity: 1;
-    //}
-    //
-    //&:hover .gallery__img {
-    //    transform: scale(1.1) rotate(3deg);
-    //}
 }
 
 .gallery__link {
@@ -82,8 +53,7 @@
 }
 
 .gallery__img-box {
-    //width: 373px;
-    //height: 260px;
+
 }
 
 .gallery__img {
@@ -93,4 +63,56 @@
     transition-timing-function: ease-out;
     transition-property: opacity, transform, filter;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery__item {
+        width: 460px;
+        height: 320px;
+
+        &:nth-child(3n) {
+            margin-right: 10px;
+        }
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(n + 3) {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery__item {
+        width: 340px;
+        height: 237px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery__item {
+        width: 100%;
+        height: 355px;
+        margin-right: 0;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(n + 2) {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gallery__item {
+        height: auto;
+    }
+
+    .gallery__img {
+        height: auto;
+    }
 }

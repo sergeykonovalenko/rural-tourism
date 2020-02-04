@@ -13,3 +13,20 @@
 .feedback-footer__button {
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 992px) {
+    .feedback-footer__txt {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback-footer {
+        display: block;
+    }
+
+    .feedback-footer__txt {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

@@ -24,3 +24,9 @@
         outline: none;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .filter__button {
+        width: 100%;
+    }
+}

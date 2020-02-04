@@ -10,6 +10,7 @@
 
 .review__right {
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .review__terms {
@@ -55,4 +56,15 @@
 
 .review__button-hide-more {
 
+}
+
+@media screen and (max-width: 768px) {
+    .review {
+        display: block;
+    }
+
+    .review__left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

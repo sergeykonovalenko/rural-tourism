@@ -59,3 +59,40 @@
         background-image: url("img/bg/advantages-4.svg");
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .advantages__list {
+        width: 510px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .advantages__item {
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages__list {
+        width: 510px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .advantages__list {
+        display: block;
+        width: auto;
+    }
+
+    .advantages__item {
+        margin-right: auto;
+        margin-left: auto;
+
+        &:nth-child(2n) {
+            margin-right: auto;
+        }
+    }
+}

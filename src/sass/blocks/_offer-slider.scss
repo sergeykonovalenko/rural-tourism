@@ -54,3 +54,16 @@
 .offer-slider .slick-active button {
     background-color: $color-secondary;
 }
+
+@media screen and (max-width: 1200px) {
+    .offer-slider .slick-dots {
+        bottom: 325px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offer-slider .slick-dots {
+        top: 155px;
+        bottom: auto;
+    }
+}

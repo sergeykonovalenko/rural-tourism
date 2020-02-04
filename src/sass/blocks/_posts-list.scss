@@ -28,3 +28,31 @@
         transform: scale(1.1) rotate(3deg);
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .posts-list__item {
+        width: 460px;
+
+        &--wide {
+            width: 460px;
+        }
+
+        &--big {
+            width: 460px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .posts-list__item {
+        width: 100%;
+
+        &--wide {
+            width: 100%;
+        }
+
+        &--big {
+            width: 100%;
+        }
+    }
+}

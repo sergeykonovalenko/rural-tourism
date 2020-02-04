@@ -32,6 +32,7 @@
 
 .object-card__price-and-button {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 40px;
 }
@@ -50,4 +51,73 @@
 
 .object-card__button-more {
 
+}
+
+@media screen and (max-width: 1200px) {
+    .object-card .object-card__img {
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .object-card {
+        display: block;
+    }
+
+    .object-card .object-card__img {
+        width: 460px;
+        margin: 0 auto;
+    }
+
+    .object-card__left {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .object-card__name {
+        text-align: center;
+    }
+
+    .object-card__rating {
+        justify-content: center;
+    }
+
+    .object-card__group {
+        justify-content: center;
+    }
+
+    .object-card__price-and-button {
+        justify-content: center;
+    }
+
+    .object-card__button-more-box {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .object-card .object-card__img {
+        width: 100%;
+        height: 333px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .object-card .object-card__img {
+        height: auto;
+    }
+    
+    .object-card__price-and-button {
+        display: block;
+    }
+
+    .object-card__price-box {
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .object-card__button-buy {
+        width: 100%;
+    }
 }

@@ -54,3 +54,18 @@
         animation: .6s shake-custom;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .contacts-list {
+        display: block;
+    }
+
+    .contacts-list__item {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

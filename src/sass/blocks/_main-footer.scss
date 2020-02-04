@@ -33,7 +33,6 @@
     display: block;
     font-size: 12px;
     line-height: 1.5;
-    //text-align: center;
 }
 
 .main-footer__author a {
@@ -43,5 +42,25 @@
     &:hover,
     &:focus {
         text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-footer__logo {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-footer__top {
+        flex-direction: column;
+    }
+
+    .main-footer__logo {
+        margin: 0 auto 30px;
+    }
+
+    .main-footer__nav {
+        width: 100%;
     }
 }

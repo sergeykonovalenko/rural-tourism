@@ -6,3 +6,9 @@
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .previous-views__slider {
+      margin: 0 auto;
+  }
+}

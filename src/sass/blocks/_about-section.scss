@@ -37,3 +37,21 @@
     min-width: 165px;
     color: #fff;
 }
+
+@media screen and (max-width: 992px) {
+    .about-section__content img {
+        width: 315px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-section__content picture {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-section__content img {
+        float: none;
+        width: 100%;
+    }
+}

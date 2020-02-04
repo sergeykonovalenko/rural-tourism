@@ -39,6 +39,11 @@
     <header class="main-header">
         <div class="main-header__top">
             <div class="container">
+                <button class="main-header__hamburger" type="button" title="Главное меню">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </button>
                 <a class="main-header__logo">
                     <picture>
                         <source srcset="img/base/logo.webp" type="image/webp">
@@ -97,6 +102,25 @@
                 </nav><!-- / .main-nav -->
             </div>
         </div>
+        <div class="sidenav">
+            <div class="sidenav__head">
+                <a class="sidenav__head__logo">
+                    <picture>
+                        <source srcset="img/base/logo.webp" type="image/webp">
+                        <img src="img/base/logo.png" width="80" height="54" alt="Сельський туризм">
+                    </picture>
+                </a>
+                <button class="sidenav__close" type="button" aria-label="Закрыть меню"></button>
+            </div>
+            <ul class="sidenav__menu">
+                <li><a href="#">Направления</a></li>
+                <li><a href="#">Варианты размещения</a></li>
+                <li><a href="#">Темы отдыха</a></li>
+                <li><a href="discounts.html">Предложения и скидки</a></li>
+                <li><a href="articles.html">Полезные статьи</a></li>
+            </ul>
+        </div><!-- / .sidenav -->
+        <div class="drawer-backdrop"></div>
     </header><!-- / .main-header -->
 
     <h1 class="visually-hidden">Сельский туризм</h1>
@@ -202,7 +226,7 @@
     <section class="previous-views">
         <div class="container">
             <p class="previous-views__title heading-2">Ранее вы смотрели</p>
-            <div class="card-slider">
+            <div class="previous-views__slider card-slider">
                 <div class="card-slider__item">
                     <a class="card-item" href="object.html">
                         <p class="card-item__label">Новинка</p>
@@ -345,7 +369,7 @@
             <div class="about-section__content content clearfix">
                 <picture>
                     <source srcset="img/base/about-section.webp" type="image/webp">
-                    <img src="img/base/about-section.jpg" alt="">
+                    <img src="img/base/about-section.jpg" width="415" alt="">
                 </picture>
                 <p class="about-section__subtitle"><strong>Зачем мы?</strong></p>
                 <p>

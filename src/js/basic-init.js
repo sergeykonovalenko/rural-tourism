@@ -1,6 +1,19 @@
 $(document).ready(function () {
     'use strict';
 
+    const element = document.documentElement;
+
+    // is mobile
+    const is_mobile = isMobile();
+    if (is_mobile) {
+        element.classList.add('is-mobile');
+
+        // show/hide languages
+        $('.language-switch').on('click', function () {
+            $(this).toggleClass('language-switch--show');
+        });
+    }
+
     // init modal
     $('.light-box-img').fancybox({
         backFocus: false,
@@ -27,7 +40,7 @@ $(document).ready(function () {
         pauseOnHover: false,
     });
 
-    // offer object
+    // offer object slider
     $('.offer-object').slick({
         dots: false,
         arrows: true,
@@ -37,6 +50,15 @@ $(document).ready(function () {
         pauseOnHover: false,
         prevArrow: '<button class="offer-object__arrow offer-object__arrow--prev" type="button" aria-label="Назад"><span class="offer-object__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 15.5 26.7" fill="#fff"><path d="M.4 12.5L12.6.4c.5-.5 1.3-.5 1.8 0l.7.7c.5.5.5 1.3 0 1.8L4.5 13.3l10.6 10.5c.5.5.5 1.3 0 1.8l-.7.7c-.5.5-1.3.5-1.8 0L.4 14.2c-.5-.5-.5-1.3 0-1.7z"/></svg></span></button>',
         nextArrow: '<button class="offer-object__arrow offer-object__arrow--next" type="button" aria-label="Вперед"><span class="offer-object__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 15.5 26.7" fill="#fff"><path d="M15.1 14.2L2.9 26.3c-.5.5-1.3.5-1.8 0l-.7-.7c-.5-.5-.5-1.3 0-1.8L11 13.3.4 2.9c-.5-.5-.5-1.3 0-1.8l.7-.7c.5-.5 1.3-.5 1.8 0l12.3 12.1c.4.4.4 1.2-.1 1.7z"/></svg></span></button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                }
+            },
+        ]
     });
 
     // card slider
@@ -47,6 +69,22 @@ $(document).ready(function () {
         slidesToScroll: 3,
         pauseOnFocus: false,
         pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
 
     // slider interesting
@@ -59,6 +97,22 @@ $(document).ready(function () {
         pauseOnHover: false,
         prevArrow: '<button class="slider-interesting__arrow slider-interesting__arrow--prev" type="button" aria-label="Назад"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="102"><path d="M1 51L14 1v100z" fill="none" stroke="#a7b51a" stroke-width="2"/></svg></button>',
         nextArrow: '<button class="slider-interesting__arrow slider-interesting__arrow--next" type="button" aria-label="Вперед"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="102"><path d="M14 51L1 100.99V1z" fill="none" stroke="#a7b51a" stroke-width="2"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
 
     // init Masonry
@@ -300,44 +354,6 @@ $(document).ready(function () {
         $(this).val('');
     });*/
 
-    //
-    $('.steps__form').validate({
-        rules: {
-            'customer[first_name]': 'required',
-            'customer[last_name]': 'required',
-            'customer[email]': {
-                required: true,
-                email: true
-            },
-            'customer[password]': {
-                required: true,
-                minlength: 5,
-            },
-            'customer[confirmPassword]': {
-                required: true,
-                minlength: 5,
-                equalTo: '#identification-last-confirm-password'
-            },
-        },
-        messages: {
-            'customer[first_name]': 'Это поле необходимо заполнить.',
-            'customer[last_name]': 'Это поле необходимо заполнить.',
-            'customer[email]': {
-                required: 'Это поле необходимо заполнить.',
-                email: 'Пожалуйста, введите корректный адрес электронной почты.'
-            },
-            'customer[password]': {
-                required: 'Это поле необходимо заполнить.',
-                minlength: 'Пожалуйста, введите не меньше {0} символов.'
-            },
-            'customer[confirmPassword]': {
-                required: 'Это поле необходимо заполнить.',
-                minlength: 'Пожалуйста, введите не меньше {0} символов.',
-                equalTo: 'Пожалуйста, введите такой же пароль.'
-            },
-        },
-    });
-
     // form validation
     $('.form').each(function () {
         $(this).validate({
@@ -389,7 +405,17 @@ $(document).ready(function () {
 
     });
 
+    // show/hide mobile menu
+    $('.main-header__hamburger, .drawer-backdrop, .sidenav__close').on('click', function () {
+        $('html').toggleClass('show-main-nav');
+    });
+
     // masked input
     $('input[type="tel"]').mask("+7 (999) 999 99 99");
+
+    // is mobile
+    function isMobile() {
+        return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+    }
 
 }); // end ready

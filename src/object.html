@@ -39,6 +39,11 @@
     <header class="main-header main-header--static">
         <div class="main-header__top">
             <div class="container">
+                <button class="main-header__hamburger" type="button" title="Главное меню">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </button>
                 <a class="main-header__logo" href="index.html">
                     <picture>
                         <source srcset="img/base/logo.webp" type="image/webp">
@@ -97,6 +102,25 @@
                 </nav><!-- / .main-nav -->
             </div>
         </div>
+        <div class="sidenav">
+            <div class="sidenav__head">
+                <a class="sidenav__head__logo">
+                    <picture>
+                        <source srcset="img/base/logo.webp" type="image/webp">
+                        <img src="img/base/logo.png" width="80" height="54" alt="Сельський туризм">
+                    </picture>
+                </a>
+                <button class="sidenav__close" type="button" aria-label="Закрыть меню"></button>
+            </div>
+            <ul class="sidenav__menu">
+                <li><a href="#">Направления</a></li>
+                <li><a href="#">Варианты размещения</a></li>
+                <li><a href="#">Темы отдыха</a></li>
+                <li><a href="discounts.html">Предложения и скидки</a></li>
+                <li><a href="articles.html">Полезные статьи</a></li>
+            </ul>
+        </div><!-- / .sidenav -->
+        <div class="drawer-backdrop"></div>
     </header><!-- / .main-header -->
 
     <section class="offer-object">
@@ -324,7 +348,7 @@
 
             <section class="interesting" id="js-interesting">
                 <p class="interesting__title heading-2 heading-2--extra"><span>Интересное у нас</span></p>
-                <div class="slider-interesting">
+                <div class="interesting__slider slider-interesting">
                     <div class="slider-interesting__item">
                         <a class="slider-interesting__link" href="article.html">
                             <picture class="slider-interesting__img-box">
@@ -473,8 +497,11 @@
             </section><!-- / .interesting -->
 
             <section class="gallery-section" id="js-gallery-section">
-                <p class="gallery-section__title heading-2 heading-2--extra heading-2--icon-right heading-2--icon-right--gallery">
-                    <span>Фотогалерея</span>
+                <p class="gallery-section__title heading-2 heading-2--extra">
+                    <span>
+                        Фотогалерея
+                        <i class="heading-2__icon heading-2__icon--gallery"></i>
+                    </span>
                 </p>
                 <ul class="gallery-section__gallery gallery">
                     <li class="gallery__item">
@@ -604,8 +631,11 @@
             </section><!-- / .gallery-section -->
 
             <section class="terms-of-placement" id="js-terms-of-placement">
-                <p class="terms-of-placement__title heading-2 heading-2--extra heading-2--icon-right heading-2--icon-right--terms-of-placement">
-                    <span>Условия размещения</span>
+                <p class="terms-of-placement__title heading-2 heading-2--extra">
+                    <span>
+                        Условия размещения
+                        <i class="heading-2__icon heading-2__icon--terms-of-placement"></i>
+                    </span>
                 </p>
 
                 <section class="terms-of-placement__object object">
@@ -613,7 +643,7 @@
                     <p class="object__title heading-3 heading-3--extra">Дома для гостей</p>
                     <div class="object-card">
                         <div class="object-card__left">
-                            <a class="light-box-img" href="img/base/object.jpg">
+                            <a class="object-card__img light-box-img" href="img/base/object.jpg">
                                 <picture class="light-box-img__box">
                                     <source srcset="img/base/object.webp" type="image/webp">
                                     <img class="light-box-img__img" src="img/base/object.jpg" alt="">
@@ -750,7 +780,7 @@
                     <p class="object__title heading-3 heading-3--extra">Номера для гостей</p>
                     <div class="object-card">
                         <div class="object-card__left">
-                            <a class="light-box-img" href="img/base/object-room-1.jpg">
+                            <a class="object-card__img light-box-img" href="img/base/object-room-1.jpg">
                                 <picture class="light-box-img__box">
                                     <source srcset="img/base/object-room-1.webp" type="image/webp">
                                     <img class="light-box-img__img" src="img/base/object-room-1.jpg" alt="">
@@ -887,7 +917,7 @@
                     <p class="object__title heading-3 heading-3--extra">Комнаты для гостей</p>
                     <div class="object-card">
                         <div class="object-card__left">
-                            <a class="light-box-img" href="img/base/object-room-6.jpg">
+                            <a class="object-card__img light-box-img" href="img/base/object-room-6.jpg">
                                 <picture class="light-box-img__box">
                                     <source srcset="img/base/object-room-6.webp" type="image/webp">
                                     <img class="light-box-img__img" src="img/base/object-room-6.jpg" alt="">
@@ -1021,8 +1051,11 @@
             </section><!-- / .terms-of-placement -->
 
             <section class="rating-and-reviews" id="js-rating-and-reviews">
-                <p class="rating-and-reviews__title heading-2 heading-2--extra heading-2--icon-right heading-2--icon-right--rating">
-                    <span>Рейтинг и отзывы</span>
+                <p class="rating-and-reviews__title heading-2 heading-2--extra">
+                    <span>
+                        Рейтинг и отзывы
+                        <i class="heading-2__icon heading-2__icon--rating"></i>
+                    </span>
                 </p>
 
                 <section class="overall-rating" id="js-overall-rating">
@@ -1063,7 +1096,9 @@
                 <section class="guest-reviews" id="js-guest-reviews">
                     <div class="guest-reviews__head">
                         <p class="guest-reviews__title heading-3 heading-3--extra">Отзывы гостей</p>
-                        <a class="guest-reviews__btn-leave-feedback button button--with-icon button--with-icon--plus-icon btn-modal" href="#js-modal-review">Оставить свой отзыв</a>
+                        <p class="guest-reviews__btn-leave-feedback-box">
+                            <a class="guest-reviews__btn-leave-feedback button button--with-icon button--with-icon--plus-icon btn-modal" href="#js-modal-review">Оставить свой отзыв</a>
+                        </p>
                     </div>
                     <ul class="guest-reviews__list reviews-list">
                         <li class="reviews-list__item review">
@@ -1548,15 +1583,21 @@
             </section><!-- / .rating-and-reviews -->
 
             <section class="location" id="js-location">
-                <p class="location__title heading-2 heading-2--extra heading-2--icon-right heading-2--icon-right--location">
-                    <span>Расположение на карте</span>
+                <p class="location__title heading-2 heading-2--extra">
+                    <span>
+                        Расположение на карте
+                        <i class="heading-2__icon heading-2__icon--location"></i>
+                    </span>
                 </p>
                 <div class="location__map"></div>
             </section><!-- / .location -->
 
             <section class="how-to-get-there" id="js-how-to-get-there">
-                <p class="how-to-get-there__title heading-2 heading-2--extra heading-2--icon-right heading-2--icon-right--how-to-get-there">
-                    <span>Как доехать</span>
+                <p class="how-to-get-there__title heading-2 heading-2--extra">
+                    <span>
+                        Как доехать
+                        <i class="heading-2__icon heading-2__icon--how-to-get-there"></i>
+                    </span>
                 </p>
                 <div class="how-to-get-there__txt content">
                     <p>

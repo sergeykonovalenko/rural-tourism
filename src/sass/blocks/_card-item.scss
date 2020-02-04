@@ -87,3 +87,9 @@
 .card-item__body *:last-child {
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 390px) {
+    .card-item {
+        width: 100%;
+    }
+}

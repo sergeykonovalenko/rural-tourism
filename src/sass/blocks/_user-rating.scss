@@ -18,3 +18,9 @@
     text-transform: uppercase;
     color: $color-secondary;
 }
+
+@media screen and (max-width: 768px) {
+    .user-rating {
+        text-align: center;
+    }
+}
