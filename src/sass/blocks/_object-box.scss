@@ -26,6 +26,7 @@
     display: flex;
     width: 360px;
     height: 270px;
+    background-color: $color-secondary--darkest;
     overflow: hidden;
 
     &:hover .object-box__img,
@@ -52,4 +53,26 @@
     margin-bottom: 0;
     font-size: 16px;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 992px) {
+    .object-box__img-link {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .object-box__info {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .object-box__img-link {
+        width: 100%;
+        height: auto;
+    }
+
+    .object-box__img {
+        height: auto;
+    }
 }

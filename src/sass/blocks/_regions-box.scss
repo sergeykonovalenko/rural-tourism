@@ -24,7 +24,6 @@
 .regions-box__item {
     margin-top: 6px;
     margin-right: 15px;
-    font-weight: 600;
 
     &::after {
         content: "";
@@ -32,8 +31,37 @@
         vertical-align: middle;
         width: 20px;
         height: 15px;
-        margin-left: 10px;
+        margin-left: 15px;
         background-color: $color-secondary;
         transform: skewX(-15deg);
+    }
+}
+
+.regions-box__link {
+    font-weight: 600;
+    color: $color-main;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .regions-box {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .regions-box {
+        padding-right: 15px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .regions-box {
+        padding-left: 20px;
     }
 }

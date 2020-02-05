@@ -14,6 +14,7 @@
 
 .host-blog__left {
     flex-shrink: 0;
+    width: 360px;
     margin-right: 50px;
 }
 
@@ -47,4 +48,25 @@
 
 .host-blog__wp-pagenavi {
     justify-content: flex-start;
+}
+
+@media screen and (max-width: 992px) {
+    .host-blog__wr {
+        display: block;
+    }
+
+    .host-blog__left {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .host-blog__host {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .host-blog__wp-pagenavi {
+        justify-content: center;
+    }
 }
