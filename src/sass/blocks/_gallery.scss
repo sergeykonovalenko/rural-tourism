@@ -8,9 +8,9 @@
 
 .gallery__item {
     display: flex;
-    width: 373px;
-    height: 260px;
-    margin-right: 10px;
+    width: 376px;
+    height: 262px;
+    margin-right: 5px;
     background-color: $color-secondary--darkest;
     overflow: hidden;
 
@@ -19,7 +19,7 @@
     }
 
     &:nth-child(n + 4) {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 }
 
@@ -65,13 +65,13 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
     .gallery__item {
-        width: 460px;
-        height: 320px;
+        width: 462.5px;
+        height: 322px;
 
         &:nth-child(3n) {
-            margin-right: 10px;
+            margin-right: 5px;
         }
 
         &:nth-child(2n) {
@@ -79,15 +79,15 @@
         }
 
         &:nth-child(n + 3) {
-            margin-top: 10px;
+            margin-top: 5px;
         }
     }
 }
 
 @media screen and (max-width: 992px) {
     .gallery__item {
-        width: 340px;
-        height: 237px;
+        width: 342.5px;
+        height: 239px;
     }
 }
 
@@ -102,7 +102,7 @@
         }
 
         &:nth-child(n + 2) {
-            margin-top: 10px;
+            margin-top: 5px;
         }
     }
 }

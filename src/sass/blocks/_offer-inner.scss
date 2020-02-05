@@ -90,3 +90,22 @@
 .offer-inner__regions-box {
     margin-top: 50px;
 }
+
+@media screen and (max-width: 1230px) {
+    .offer-inner {
+        display: flex;
+        align-items: center;
+        min-height: 315px;
+
+        &--with-filter {
+            padding-top: calc(70px + 50px);
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offer-inner__title {
+        font-size: 30px;
+    }
+}

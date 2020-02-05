@@ -185,12 +185,12 @@
     }
 }
 
-.main-header__filter {
+.main-header__filter-desktop {
     padding: 10px 0;
     background-color: rgba(255, 255, 255, .8);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
     .main-header__top .container {
         max-width: none;
     }
@@ -199,7 +199,8 @@
         display: block;
     }
 
-    .main-header__bottom {
+    .main-header__bottom,
+    .main-header__filter-desktop {
         display: none;
     }
 }

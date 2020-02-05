@@ -130,7 +130,7 @@ $(document).ready(function () {
     let $masonryGallery = $('.masonry-gallery').masonry({
         itemSelector: '.masonry-gallery__item',
         columnWidth: '.masonry-gallery__item--small',
-        gutter: 10,
+        gutter: (window.innerWidth < 993) ? 5 : 10,
     });
 
     // layout Masonry after each image loads

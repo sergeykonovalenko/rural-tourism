@@ -11,9 +11,16 @@
 .actions-posts__page-count {
     display: flex;
     align-items: center;
-    margin: 0;
+    flex-shrink: 0;
+    margin: 0 15px 0 0;
 }
 
 .actions-posts__sort {
 
+}
+
+@media screen and (max-width: 576px) {
+    .actions-posts {
+        padding-left: 15px;
+    }
 }

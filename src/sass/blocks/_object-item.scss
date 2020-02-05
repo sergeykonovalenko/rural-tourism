@@ -80,11 +80,13 @@
 
 .object-item__footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .object-item__rating {
     flex-grow: 1;
+    flex-shrink: 0;
     margin-right: 20px;
 }
 
@@ -98,4 +100,31 @@
 .object-item__price b {
     font-weight: 700;
     font-size: 16px;
+}
+
+@media screen and (max-width: 1230px) {
+    .object-item {
+        display: block;
+    }
+
+    .object-item__img-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .object-item__footer {
+        display: block;
+    }
+
+    .object-item__rating {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .object-item__price {
+        width: auto;
+        text-align: center;
+    }
 }

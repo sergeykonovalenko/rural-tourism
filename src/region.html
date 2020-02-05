@@ -111,6 +111,7 @@
                             <p class="fields-list__field-box fields-list__field-box--select">
                                 <select class="fields-list__field filter__field" id="filter-region" name="filter-region">
                                     <option disabled selected>Интересующий регион</option>
+                                    <option value="all-regions">Все</option>
                                     <option value="region-1">Условный регион 1</option>
                                     <option value="region-2">Условный регион 2</option>
                                     <option value="region-3">Условный регион 3</option>
@@ -129,6 +130,7 @@
                             <p class="fields-list__field-box fields-list__field-box--select">
                                 <select class="fields-list__field filter__field" id="filter-placement-option" name="filter-placement-option">
                                     <option disabled selected>Вариант размещения</option>
+                                    <option value="all-placement-option">Все</option>
                                     <option value="placement-option-1">Вариант размещения 1</option>
                                     <option value="placement-option-2">Вариант размещения 2</option>
                                     <option value="placement-option-3">Вариант размещения 3</option>
@@ -147,6 +149,7 @@
                             <p class="fields-list__field-box fields-list__field-box--select">
                                 <select class="fields-list__field filter__field" id="filter-theme-relaxation" name="filter-theme-relaxation">
                                     <option disabled selected>Тема отдыха</option>
+                                    <option value="all-theme-relaxation">Все</option>
                                     <option value="theme-relaxation-1">Тема отдыха 1</option>
                                     <option value="theme-relaxation-2">Тема отдыха 2</option>
                                     <option value="theme-relaxation-3">Тема отдыха 3</option>
@@ -219,8 +222,74 @@
 
     <div class="area-content">
         <div class="container">
+            <form class="area-content__filter-mobile filter" action="#" method="get">
+                <ul class="filter__fields-list fields-list fields-list--row">
+                    <li class="fields-list__item">
+                        <label class="visually-hidden" for="filter-mobile-region">Интересующий регион</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="filter-mobile-region" name="filter-region">
+                                <option disabled selected>Интересующий регион</option>
+                                <option value="all-regions">Все</option>
+                                <option value="region-1">Условный регион 1</option>
+                                <option value="region-2">Условный регион 2</option>
+                                <option value="region-3">Условный регион 3</option>
+                                <option value="region-4">Условный регион 4</option>
+                                <option value="region-5">Условный регион 5</option>
+                                <option value="region-6">Условный регион 6</option>
+                                <option value="region-7">Условный регион 7</option>
+                                <option value="region-8">Условный регион 8</option>
+                                <option value="region-9">Условный регион 9</option>
+                                <option value="region-10">Условный регион 10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item">
+                        <label class="visually-hidden" for="filter-mobile-placement-option">Вариант размещения</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="filter-mobile-placement-option" name="filter-placement-option">
+                                <option disabled selected>Вариант размещения</option>
+                                <option value="all-placement-option">Все</option>
+                                <option value="placement-option-1">Вариант размещения 1</option>
+                                <option value="placement-option-2">Вариант размещения 2</option>
+                                <option value="placement-option-3">Вариант размещения 3</option>
+                                <option value="placement-option-4">Вариант размещения 4</option>
+                                <option value="placement-option-5">Вариант размещения 5</option>
+                                <option value="placement-option-6">Вариант размещения 6</option>
+                                <option value="placement-option-7">Вариант размещения 7</option>
+                                <option value="placement-option-8">Вариант размещения 8</option>
+                                <option value="placement-option-9">Вариант размещения 9</option>
+                                <option value="placement-option-10">Вариант размещения 10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item">
+                        <label class="visually-hidden" for="filter-mobile-theme-relaxation">Тема отдыха</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="filter-mobile-theme-relaxation" name="filter-theme-relaxation">
+                                <option disabled selected>Тема отдыха</option>
+                                <option value="all-theme-relaxation">Все</option>
+                                <option value="theme-relaxation-1">Тема отдыха 1</option>
+                                <option value="theme-relaxation-2">Тема отдыха 2</option>
+                                <option value="theme-relaxation-3">Тема отдыха 3</option>
+                                <option value="theme-relaxation-4">Тема отдыха 4</option>
+                                <option value="theme-relaxation-5">Тема отдыха 5</option>
+                                <option value="theme-relaxation-6">Тема отдыха 6</option>
+                                <option value="theme-relaxation-7">Тема отдыха 7</option>
+                                <option value="theme-relaxation-8">Тема отдыха 8</option>
+                                <option value="theme-relaxation-9">Тема отдыха 9</option>
+                                <option value="theme-relaxation-10">Тема отдыха 10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--button">
+                        <button class="filter__button button">Показать</button>
+                    </li>
+                </ul><!-- / .fields-list -->
+            </form><!-- / .filter -->
             <div class="area-content__map-and-objects">
-                <div class="area-content__map"></div>
+                <div class="area-content__map-container">
+                    <div class="area-content__map"></div>
+                </div>
                 <div class="area-content__objects">
                     <div class="area-content__actions-posts actions-posts">
                         <p class="actions-posts__page-count">1 из 5</p>
@@ -390,6 +459,122 @@
                                         <picture class="object-item__owner-avatar-box">
                                             <source srcset="img/base/owner-3.webp" type="image/webp">
                                             <img class="object-item__owner-avatar" src="img/base/owner-3.jpg" alt="">
+                                        </picture>
+                                        <p class="object-item__name">Условное название данного объекта, полное название</p>
+                                    </div>
+                                    <ul class="object-item__features features-object-item">
+                                        <li class="features-object-item__item features-object-item__item--location">Воронино, Ярославская область, Центральная Россия</li>
+                                        <li class="features-object-item__item features-object-item__item--accommodation-options">Отдельные номера / Дом на ферме / Дом в лесу</li>
+                                        <li class="features-object-item__item features-object-item__item--people">Максимальное количество: <strong>5 гостей</strong></li>
+                                    </ul><!-- / .features-object-item -->
+                                    <div class="object-item__footer">
+                                        <div class="object-item__rating rating-object-item">
+                                            <span class="rating-object-item__value">9.7</span>
+                                            <span class="rating-object-item__txt">Очень хорошо</span>
+                                        </div><!-- / .object-item-rating -->
+                                        <p class="object-item__price">от <b>5 000 ₽</b> ночь<br> за 1 гостя</p>
+                                    </div>
+                                </div>
+                            </a><!-- / .objects-item -->
+                        </li>
+                        <li class="objects-list__item">
+                            <a class="object-item" href="object.html">
+                                <picture class="object-item__img-box">
+                                    <source srcset="img/base/object-1.webp" type="image/webp">
+                                    <img class="object-item__img" src="img/base/object-1.jpg" alt="">
+                                </picture>
+                                <div class="object-item__info">
+                                    <div class="object-item__head">
+                                        <picture class="object-item__owner-avatar-box">
+                                            <source srcset="img/base/owner-1.webp" type="image/webp">
+                                            <img class="object-item__owner-avatar" src="img/base/owner-1.jpg" alt="">
+                                        </picture>
+                                        <p class="object-item__name">Условное название данного объекта, полное название</p>
+                                    </div>
+                                    <ul class="object-item__features features-object-item">
+                                        <li class="features-object-item__item features-object-item__item--location">Воронино, Ярославская область, Центральная Россия</li>
+                                        <li class="features-object-item__item features-object-item__item--accommodation-options">Отдельные номера / Дом на ферме / Дом в лесу</li>
+                                        <li class="features-object-item__item features-object-item__item--people">Максимальное количество: <strong>5 гостей</strong></li>
+                                    </ul><!-- / .features-object-item -->
+                                    <div class="object-item__footer">
+                                        <div class="object-item__rating rating-object-item">
+                                            <span class="rating-object-item__value">9.7</span>
+                                            <span class="rating-object-item__txt">Очень хорошо</span>
+                                        </div><!-- / .object-item-rating -->
+                                        <p class="object-item__price">от <b>5 000 ₽</b> ночь<br> за 1 гостя</p>
+                                    </div>
+                                </div>
+                            </a><!-- / .objects-item -->
+                        </li>
+                        <li class="objects-list__item">
+                            <a class="object-item" href="object.html">
+                                <picture class="object-item__img-box">
+                                    <source srcset="img/base/object-2.webp" type="image/webp">
+                                    <img class="object-item__img" src="img/base/object-2.jpg" alt="">
+                                </picture>
+                                <div class="object-item__info">
+                                    <div class="object-item__head">
+                                        <picture class="object-item__owner-avatar-box">
+                                            <source srcset="img/base/owner-2.webp" type="image/webp">
+                                            <img class="object-item__owner-avatar" src="img/base/owner-2.jpg" alt="">
+                                        </picture>
+                                        <p class="object-item__name">Условное название данного объекта, полное название</p>
+                                    </div>
+                                    <ul class="object-item__features features-object-item">
+                                        <li class="features-object-item__item features-object-item__item--location">Воронино, Ярославская область, Центральная Россия</li>
+                                        <li class="features-object-item__item features-object-item__item--accommodation-options">Отдельные номера / Дом на ферме / Дом в лесу</li>
+                                        <li class="features-object-item__item features-object-item__item--people">Максимальное количество: <strong>5 гостей</strong></li>
+                                    </ul><!-- / .features-object-item -->
+                                    <div class="object-item__footer">
+                                        <div class="object-item__rating rating-object-item rating-object-item--fine">
+                                            <span class="rating-object-item__value">8.5</span>
+                                            <span class="rating-object-item__txt">Нормально</span>
+                                        </div><!-- / .object-item-rating -->
+                                        <p class="object-item__price">от <b>5 000 ₽</b> ночь<br> за 1 гостя</p>
+                                    </div>
+                                </div>
+                            </a><!-- / .objects-item -->
+                        </li>
+                        <li class="objects-list__item">
+                            <a class="object-item" href="object.html">
+                                <picture class="object-item__img-box">
+                                    <source srcset="img/base/object-3.webp" type="image/webp">
+                                    <img class="object-item__img" src="img/base/object-3.jpg" alt="">
+                                </picture>
+                                <div class="object-item__info">
+                                    <div class="object-item__head">
+                                        <picture class="object-item__owner-avatar-box">
+                                            <source srcset="img/base/owner-3.webp" type="image/webp">
+                                            <img class="object-item__owner-avatar" src="img/base/owner-3.jpg" alt="">
+                                        </picture>
+                                        <p class="object-item__name">Условное название данного объекта, полное название</p>
+                                    </div>
+                                    <ul class="object-item__features features-object-item">
+                                        <li class="features-object-item__item features-object-item__item--location">Воронино, Ярославская область, Центральная Россия</li>
+                                        <li class="features-object-item__item features-object-item__item--accommodation-options">Отдельные номера / Дом на ферме / Дом в лесу</li>
+                                        <li class="features-object-item__item features-object-item__item--people">Максимальное количество: <strong>5 гостей</strong></li>
+                                    </ul><!-- / .features-object-item -->
+                                    <div class="object-item__footer">
+                                        <div class="object-item__rating rating-object-item">
+                                            <span class="rating-object-item__value">9.7</span>
+                                            <span class="rating-object-item__txt">Очень хорошо</span>
+                                        </div><!-- / .object-item-rating -->
+                                        <p class="object-item__price">от <b>5 000 ₽</b> ночь<br> за 1 гостя</p>
+                                    </div>
+                                </div>
+                            </a><!-- / .objects-item -->
+                        </li>
+                        <li class="objects-list__item">
+                            <a class="object-item" href="object.html">
+                                <picture class="object-item__img-box">
+                                    <source srcset="img/base/object-1.webp" type="image/webp">
+                                    <img class="object-item__img" src="img/base/object-1.jpg" alt="">
+                                </picture>
+                                <div class="object-item__info">
+                                    <div class="object-item__head">
+                                        <picture class="object-item__owner-avatar-box">
+                                            <source srcset="img/base/owner-1.webp" type="image/webp">
+                                            <img class="object-item__owner-avatar" src="img/base/owner-1.jpg" alt="">
                                         </picture>
                                         <p class="object-item__name">Условное название данного объекта, полное название</p>
                                     </div>
