@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Попап Отзыв | Отдых в  усадьбах, сельских и гостевых домах, котеджах и мини-отелях.</title>
+    <title>Сельський туризм | Отдых в  усадьбах, сельских и гостевых домах, котеджах и мини-отелях.</title>
     <meta name="description" content="Сельский туризм доступный каждому">
     <meta name="keywords" content="сельский зеленый туризм, зимний отдых, туры, экологический туризм, усадьба, гостевой дом, семейный отдых, детский отдых, коттедж, частный сектор">
     <!-- Favicon -->
@@ -39,7 +39,12 @@
     <header class="main-header">
         <div class="main-header__top">
             <div class="container">
-                <a class="main-header__logo" href="index.html">
+                <button class="main-header__hamburger" type="button" title="Главное меню">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </button>
+                <a class="main-header__logo">
                     <picture>
                         <source srcset="img/base/logo.webp" type="image/webp">
                         <img src="img/base/logo.png" width="80" height="54" alt="Сельський туризм">
@@ -221,7 +226,7 @@
     <section class="previous-views">
         <div class="container">
             <p class="previous-views__title heading-2">Ранее вы смотрели</p>
-            <div class="card-slider">
+            <div class="previous-views__slider card-slider">
                 <div class="card-slider__item">
                     <a class="card-item" href="object.html">
                         <p class="card-item__label">Новинка</p>
@@ -364,7 +369,7 @@
             <div class="about-section__content content clearfix">
                 <picture>
                     <source srcset="img/base/about-section.webp" type="image/webp">
-                    <img src="img/base/about-section.jpg" alt="">
+                    <img src="img/base/about-section.jpg" width="415" alt="">
                 </picture>
                 <p class="about-section__subtitle"><strong>Зачем мы?</strong></p>
                 <p>
@@ -379,7 +384,7 @@
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
                 </p>
                 <p class="about-section__button-box">
-                    <a class="about-section__button button" href="#">Подробнее</a>
+                    <a class="about-section__button button" href="article.html">Подробнее</a>
                 </p>
             </div>
         </div>
@@ -562,9 +567,9 @@
                     <li class="nav-footer__item">
                         <p class="nav-footer__title">Доп. информация</p>
                         <ul class="nav-footer__list">
-                            <li><a href="#">Ссылка номер 1</a></li>
-                            <li><a href="#">Ссылка номер 2</a></li>
-                            <li><a href="#">Ссылка номер 3</a></li>
+                            <li><a href="area.html">Район</a></li>
+                            <li><a href="region.html">Регион</a></li>
+                            <li><a href="host-blog.html">Блог хозяина</a></li>
                             <li><a href="#">Ссылка номер 4</a></li>
                             <li><a href="#">Ссылка номер 5</a></li>
                         </ul>
@@ -594,6 +599,37 @@
             <cite class="main-footer__author">Сельський туризм 2020 | Разработка сайта — <a href="https://one-pix.ru" target="_blank">One-Pix</a></cite>
         </div>
     </footer><!-- / .main-footer -->
+
+    <!-- Modal login -->
+    <div class="modal-login modal-common" id="js-modal-login" style="display: none">
+        <div class="modal-login__box">
+            <div class="modal-login__left modal-triggers">
+                <p class="modal-triggers__title">Быть хозяином</p>
+                <ul class="modal-triggers__list">
+                    <li class="modal-triggers__item">Удобный сервис для Вашего продивижения</li>
+                    <li class="modal-triggers__item">Простое администрирование</li>
+                    <li class="modal-triggers__item">Хорошие советы и помощь</li>
+                </ul>
+            </div><!-- / .modal-triggers -->
+            <form class="modal-login__right form" action="#" method="post">
+                <fieldset class="form__field-group field-group">
+                    <legend class="field-group__title">Вход</legend>
+                    <ul class="field-group__fields-list fields-list">
+                        <li class="fields-list__item fields-list__item--full-width">
+                            <label class="visually-hidden" for="modal-login-email">E-mail</label>
+                            <input class="fields-list__field" id="modal-login-email" type="email" name="email" placeholder="E-mail">
+                        </li>
+                        <li class="fields-list__item fields-list__item--full-width">
+                            <label class="visually-hidden" for="modal-login-password">Пароль</label>
+                            <input class="fields-list__field" id="modal-login-password" type="password" name="password" placeholder="Пароль">
+                        </li>
+                    </ul>
+                    <a class="modal-login__forgot-password" href="#">Забыли пароль</a>
+                </fieldset><!-- / .field-group -->
+                <button class="form__button modal-login__button button">Войти</button>
+            </form><!-- / .form -->
+        </div>
+    </div><!-- / .modal-login -->
 
     <!-- Modal review -->
     <div class="modal-review modal-common" id="js-modal-review" style="display: none">
@@ -833,6 +869,128 @@
             </p>
         </form><!-- / .form -->
     </div><!-- / .modal-review -->
+
+    <!-- Modal order -->
+    <div class="modal-order modal-common" id="js-modal-order" style="display: none">
+        <form class="form" action="#" method="post">
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Оставить заявку</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-order-message-object-description">Дать полное описание объекта. Регион / район / объект / дом, номер или комната*</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-order-message-object-description" name="object-description" placeholder="Дать полное описание объекта. Регион / район / объект / дом, номер или комната*"></textarea>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-arrival-date">Дата заезда*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-order-arrival-date" type="text" name="arrival-date" autocomplete="off" placeholder="Дата заезда*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-date-departure">Дата выезда*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <input class="fields-list__field js-date-range-picker" id="modal-order-date-departure" type="text" name="date-departure" autocomplete="off" placeholder="Дата выезда*">
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-adults">Взрослые*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-adults" name="adults">
+                                <option disabled selected>Взрослые*</option>
+                                <option value="adults-1">1</option>
+                                <option value="adults-2">2</option>
+                                <option value="adults-3">3</option>
+                                <option value="adults-4">4</option>
+                                <option value="adults-5">5</option>
+                                <option value="adults-6">6</option>
+                                <option value="adults-7">7</option>
+                                <option value="adults-8">8</option>
+                                <option value="adults-9">9</option>
+                                <option value="adults-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-children">Дети*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-children" name="children">
+                                <option disabled selected>Дети*</option>
+                                <option value="no-children">Нет</option>
+                                <option value="children-1">1</option>
+                                <option value="children-2">2</option>
+                                <option value="children-3">3</option>
+                                <option value="children-4">4</option>
+                                <option value="children-5">5</option>
+                                <option value="children-6">6</option>
+                                <option value="children-7">7</option>
+                                <option value="children-8">8</option>
+                                <option value="children-9">9</option>
+                                <option value="children-10">10</option>
+                            </select>
+                        </p>
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-animals">Животные*</label>
+                        <p class="fields-list__field-box fields-list__field-box--select">
+                            <select class="fields-list__field filter__field" id="modal-order-animals" name="animals">
+                                <option disabled selected>Животные*</option>
+                                <option value="no-animals">Нет</option>
+                                <option value="cat">Кошка</option>
+                                <option value="dog">Собака</option>
+                                <option value="parrot">Попугай</option>
+                                <option value="horek">Хорек</option>
+                                <option value="hamster">Хомяк</option>
+                                <option value="snakes">Змей</option>
+                                <option value="iguana">Игуана</option>
+                                <option value="turtles">Черепаха</option>
+                                <option value="aquarium-fish">Аквариумные рыбки</option>
+                                <option value="spiders">Пауки</option>
+                            </select>
+                        </p>
+                    </li>
+                </ul>
+            </fieldset><!-- / .field-group -->
+            <fieldset class="form__field-group field-group">
+                <legend class="field-group__title">Введите ваши данные</legend>
+                <ul class="field-group__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-surname">Фамилия*</label>
+                        <input class="fields-list__field" id="modal-order-surname" type="text" name="surname" placeholder="Фамилия*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-name">Имя*</label>
+                        <input class="fields-list__field" id="modal-order-name" type="text" name="name" placeholder="Имя*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--one-third">
+                        <label class="visually-hidden" for="modal-order-middle-name">Отчество*</label>
+                        <input class="fields-list__field" id="modal-order-middle-name" type="text" name="middle-name" placeholder="Отчество*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-phone">Телефон*</label>
+                        <input class="fields-list__field" id="modal-order-phone" type="tel" name="phone" placeholder="Телефон*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--half-width">
+                        <label class="visually-hidden" for="modal-order-email">E-mail*</label>
+                        <input class="fields-list__field" id="modal-order-email" type="email" name="email" placeholder="E-mail*">
+                    </li>
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-review-comments-on-the-application">Комментарии к заявке</label>
+                        <textarea class="fields-list__field fields-list__field--textarea" id="modal-review-comments-on-the-application" name="comments-on-the-application" placeholder="Комментарии к заявке"></textarea>
+                    </li>
+                </ul>
+                <div class="field-group__info">
+                    <p>* Поля обязательные для заполнения.</p>
+                </div>
+                <div class="field-group__agreement agreement">
+                    <input class="agreement__field visually-hidden" id="modal-order-agreement" type="checkbox" name="agreement">
+                    <label class="agreement__label" for="modal-order-agreement">Даю согласие на обработку персональных данных</label>
+                </div><!-- / .agreement -->
+            </fieldset><!-- / .field-group -->
+            <p class="form__button-box">
+                <button class="form__button button button--extra">Забронировать</button>
+            </p>
+        </form><!-- / .form -->
+    </div><!-- / .modal-order -->
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>

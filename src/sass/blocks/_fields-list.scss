@@ -129,3 +129,13 @@
         }
     }
 }
+
+@media screen and (max-width: 732px) {
+    .fields-list__item {
+
+        &--half-width,
+        &--one-third {
+            width: 100%;
+        }
+    }
+}

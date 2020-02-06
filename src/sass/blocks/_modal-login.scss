@@ -32,3 +32,18 @@
 .modal-login__button {
     width: 100%;
 }
+
+@media screen and (max-width: 732px) {
+    .modal-login__box {
+        display: block;
+    }
+
+    .modal-login__left {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .modal-login__right {
+        width: 100%;
+    }
+}

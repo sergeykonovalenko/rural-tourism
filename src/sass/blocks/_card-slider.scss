@@ -84,3 +84,9 @@
         width: 780px;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .card-slider .slick-slide > div {
+        flex-grow: 1;
+    }
+}
