@@ -159,6 +159,7 @@
 .main-header__desc {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     margin: 0 65px 0 0;
     font-weight: 500;
     font-size: 12px;
@@ -192,7 +193,7 @@
 
 @media screen and (max-width: 1230px) {
     .main-header__top .container {
-        max-width: none;
+        width: 100%;
     }
 
     .main-header__hamburger {
@@ -214,10 +215,6 @@
 @media screen and (max-width: 576px) {
     .main-header__hamburger {
         margin-right: 15px;
-    }
-
-    .main-header__logo {
-        margin-left: auto;
     }
 
     .main-header__desc {

@@ -52,7 +52,7 @@ $(document).ready(function () {
         nextArrow: '<button class="offer-object__arrow offer-object__arrow--next" type="button" aria-label="Вперед"><span class="offer-object__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 15.5 26.7" fill="#fff"><path d="M15.1 14.2L2.9 26.3c-.5.5-1.3.5-1.8 0l-.7-.7c-.5-.5-.5-1.3 0-1.8L11 13.3.4 2.9c-.5-.5-.5-1.3 0-1.8l.7-.7c.5-.5 1.3-.5 1.8 0l12.3 12.1c.4.4.4 1.2-.1 1.7z"/></svg></span></button>',
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     dots: true,
                     arrows: false,
@@ -71,14 +71,14 @@ $(document).ready(function () {
         pauseOnHover: false,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1231,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 992,
+                breakpoint: 993,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -99,14 +99,14 @@ $(document).ready(function () {
         nextArrow: '<button class="slider-interesting__arrow slider-interesting__arrow--next" type="button" aria-label="Вперед"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="102"><path d="M14 51L1 100.99V1z" fill="none" stroke="#a7b51a" stroke-width="2"/></svg></button>',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1231,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -130,7 +130,7 @@ $(document).ready(function () {
     let $masonryGallery = $('.masonry-gallery').masonry({
         itemSelector: '.masonry-gallery__item',
         columnWidth: '.masonry-gallery__item--small',
-        gutter: (window.innerWidth < 993) ? 5 : 10,
+        gutter: 5,
     });
 
     // layout Masonry after each image loads
@@ -180,7 +180,7 @@ $(document).ready(function () {
         reviewsHidden.fadeToggle();
         $('.reviews-list').toggleClass('reviews-list--show-all');
         $(this).toggleClass('more-button--close');
-        $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Скрыть отзывы' : 'Показать больше отзывов');
+        $(this).find('span').text( $(this).hasClass('more-button--close') ? 'Показать меньше отзывов' : 'Показать больше отзывов');
     });
 
     // init progress bar line
@@ -408,6 +408,40 @@ $(document).ready(function () {
     // show/hide mobile menu
     $('.main-header__hamburger, .drawer-backdrop, .sidenav__close').on('click', function () {
         $('html').toggleClass('show-main-nav');
+    });
+
+    // read more
+    $('.host-blog__excerpt').readmore({
+        speed: 500,
+        collapsedHeight: 205,
+        moreLink: `<p class="host-blog__back-link-box">
+                       <span class="host-blog__back-link arrow-link arrow-link--to-right"><span>Читать больше</span></span>
+                   </p>`,
+        lessLink: `<p class="host-blog__back-link-box">
+                       <span class="host-blog__back-link arrow-link arrow-link--to-left"><span>Читать меньше</span></span>
+                   </p>`,
+    });
+
+    $('.object-about__txt').readmore({
+        speed: 500,
+        collapsedHeight: 205,
+        moreLink: `<p class="object-about__more-box">
+                       <a class="object-about__more arrow-link arrow-link--to-right" href="#"><span>Читать больше</span></a>
+                   </p>`,
+        lessLink: `<p class="object-about__more-box">
+                       <a class="object-about__more arrow-link arrow-link--to-left" href="#"><span>Читать меньше</span></a>
+                   </p>`,
+    });
+
+    $('.slider-interesting__txt').readmore({
+        speed: 500,
+        collapsedHeight: 130,
+        moreLink: `<p class="slider-interesting__more-box">
+                       <span class="slider-interesting__more arrow-link arrow-link--to-right"><span>Читать больше</span></span>
+                   </p>`,
+        lessLink: `<p class="slider-interesting__more-box">
+                       <span class="slider-interesting__more arrow-link arrow-link--to-left"><span>Читать меньше</span></span>
+                   </p>`,
     });
 
     // masked input

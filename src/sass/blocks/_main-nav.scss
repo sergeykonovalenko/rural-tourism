@@ -12,7 +12,6 @@
 
 .main-nav__list li {
     display: flex;
-    //flex-grow: 1;
 }
 
 .main-nav__list a {
@@ -28,8 +27,6 @@
 
     &:hover,
     &:focus {
-        //background-color: #474d0a;
-        //background-color: #A7B51A;
         color: #383d08;
     }
 }

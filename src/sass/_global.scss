@@ -250,35 +250,39 @@ h4,
 
 .container {
     position: relative;
-    width: 100%;
+    width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-}
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
+    .previous-views & {
+        width: 1200px;
     }
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
+@media screen and (max-width: 1230px) {
+    .container,
+    .previous-views .container {
+        width: 960px;
     }
 }
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
+@media screen and (max-width: 992px) {
+    .container,
+    .previous-views .container {
+        width: 720px;
     }
 }
 
-@media (min-width: 1230px) {
-    .container {
-        max-width: 1170px;
+@media screen and (max-width: 768px) {
+    .container,
+    .previous-views .container {
+        width: 540px;
+    }
+}
 
-        .previous-views & {
-            max-width: 1200px;
-        }
+@media screen and (max-width: 576px) {
+    .container,
+    .previous-views .container {
+        width: 100%;
     }
 }
