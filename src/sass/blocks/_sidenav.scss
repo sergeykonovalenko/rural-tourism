@@ -65,10 +65,88 @@
     padding-top: 15px;
 }
 
-.sidenav__menu a {
+/***** 1st level menu *****/
+.sidenav__menu > li {
+
+    &.menu-item-has-children {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.sidenav__menu > li > a {
+    flex-grow: 1;
     display: block;
     padding: 7px 15px;
     font-weight: 500;
     font-size: 16px;
+    color: $color-main;
+}
+
+.sidenav__menu .caret {
+    flex-shrink: 0;
+    width: 30px;
+}
+
+/***** 2nd level menu *****/
+.sidenav__menu > li > .sub-menu {
+    @include reset-list;
+
+    width: 100%;
+}
+
+.sidenav__menu > li > .sub-menu > li {
+
+    &.menu-item-has-children {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.sidenav__menu > li > .sub-menu > li > a {
+    flex-grow: 1;
+    display: block;
+    color: $color-main;
+}
+
+/***** 3rd level menu *****/
+.sidenav__menu > li > .sub-menu > li > .sub-menu {
+    @include reset-list;
+
+    width: 100%;
+}
+
+.sidenav__menu > li > .sub-menu > li > .sub-menu > li {
+
+    &.menu-item-has-children {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.sidenav__menu > li > .sub-menu > li > .sub-menu > li > a {
+    flex-grow: 1;
+    display: block;
+    color: $color-main;
+}
+
+/***** 4th level *****/
+.sidenav__menu > li > .sub-menu > li > .sub-menu > li > .sub-menu {
+    @include reset-list;
+
+    width: 100%;
+}
+
+.sidenav__menu > li > .sub-menu > li > .sub-menu > li > .sub-menu > li {
+
+    &.menu-item-has-children {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.sidenav__menu > li > .sub-menu > li > .sub-menu > li > .sub-menu > li > a {
+    flex-grow: 1;
+    display: block;
     color: $color-main;
 }

@@ -10,11 +10,26 @@
     justify-content: center;
 }
 
-.main-nav__list li {
+/***** 1st level menu *****/
+.main-nav__list > li {
+    position: relative;
     display: flex;
+    color: #fff;
+
+    &:hover,
+    &:hover > a {
+        color: $color-secondary--darken;
+    }
+
+    &:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        transition: transform 300ms, opacity 200ms;
+    }
 }
 
-.main-nav__list a {
+.main-nav__list > li > a {
     flex-grow: 1;
     padding: 27px 30px;
     font-weight: 600;
@@ -24,9 +39,145 @@
     color: #fff;
     text-align: center;
     transition: all .15s ease-in;
+}
 
-    &:hover,
-    &:focus {
-        color: #383d08;
+.main-nav__list a:not([href]) {
+    cursor: default;
+}
+
+.main-nav__list .caret {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 10px;
+    height: 6px;
+    transform: translate(0, -50%);
+    pointer-events: none;
+}
+
+.main-nav__list > li > .caret svg {
+    transition: all .15s ease-in;
+}
+
+/***** 2nd level menu *****/
+.main-nav__list > li > .sub-menu {
+    @include reset-list;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    padding: 15px 0;
+    background-color: rgba(150, 165, 0, .8);
+    box-shadow: 4px 4px 17px rgba(38, 52, 27, .22);
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(.9);
+    transform-origin: 50% 0;
+    transition: transform 0ms 300ms,
+                opacity 300ms,
+                visibility 0ms 300ms;
+}
+
+.main-nav__list > li > .sub-menu > li {
+    position: relative;
+    color: #fff;
+
+    &:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
     }
+
+    &:hover > a {
+        background-color: $color-secondary--darken;
+    }
+}
+
+.main-nav__list > li > .sub-menu > li > a {
+    display: block;
+    padding: 7px 25px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-nav__list > li > .sub-menu > li.menu-item-has-children > a {
+    padding-right: 30px;
+}
+
+/***** 3rd level menu *****/
+.main-nav__list > li > .sub-menu > li > .sub-menu  {
+    @include reset-list;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px;
+    background-color: rgba(150, 165, 0, .8);
+    box-shadow: 4px 4px 17px rgba(38, 52, 27, .22);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li {
+    position: relative;
+    color: #fff;
+
+    &:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:hover > a {
+        background-color: $color-secondary--darken;
+    }
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li > a {
+    display: block;
+    padding: 7px 25px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li.menu-item-has-children > a {
+    padding-right: 30px;
+}
+
+/***** 4th level *****/
+.main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu {
+    @include reset-list;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px;
+    background-color: rgba(150, 165, 0, .8);
+    box-shadow: 4px 4px 17px rgba(38, 52, 27, .22);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li {
+    color: #fff;
+
+    &:hover > a {
+        background-color: $color-secondary--darken;
+    }
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li > a {
+    display: block;
+    padding: 7px 25px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.menu-item-has-children > a {
+    padding-right: 30px;
 }

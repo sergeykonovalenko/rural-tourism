@@ -38,6 +38,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
     });
 
     // offer object slider
@@ -48,6 +50,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
         prevArrow: '<button class="offer-object__arrow offer-object__arrow--prev" type="button" aria-label="Назад"><span class="offer-object__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 15.5 26.7" fill="#fff"><path d="M.4 12.5L12.6.4c.5-.5 1.3-.5 1.8 0l.7.7c.5.5.5 1.3 0 1.8L4.5 13.3l10.6 10.5c.5.5.5 1.3 0 1.8l-.7.7c-.5.5-1.3.5-1.8 0L.4 14.2c-.5-.5-.5-1.3 0-1.7z"/></svg></span></button>',
         nextArrow: '<button class="offer-object__arrow offer-object__arrow--next" type="button" aria-label="Вперед"><span class="offer-object__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 15.5 26.7" fill="#fff"><path d="M15.1 14.2L2.9 26.3c-.5.5-1.3.5-1.8 0l-.7-.7c-.5-.5-.5-1.3 0-1.8L11 13.3.4 2.9c-.5-.5-.5-1.3 0-1.8l.7-.7c.5-.5 1.3-.5 1.8 0l12.3 12.1c.4.4.4 1.2-.1 1.7z"/></svg></span></button>',
         responsive: [
