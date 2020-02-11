@@ -78,7 +78,7 @@
                     </ul><!-- / .language-switch -->
                     <ul class="main-header__user-navigation user-navigation">
                         <li class="user-navigation__item">
-                            <a class="user-navigation__link btn-modal" href="#js-modal-order">
+                            <a class="user-navigation__link btn-modal" href="#js-modal-registration">
                                 <span>Зарегистрировать свой объект</span>
                                 <svg width="19" height="17" viewBox="0 0 27 23.9" fill="#a7b51a" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" xml:space="preserve"><path d="M3.7 23.3s0 .6.6.6h6.8v-5.6s-.1-.9.8-.9h2.8c1.1 0 1 .9 1 .9v5.6h6.7c.7 0 .7-.8.7-.8V12.9l-9.4-8.4-10 8.4v10.4z"/><path class="st0" d="M0 12.1s.8 1.6 2.7 0l11-9.3L24.1 12c2.1 1.5 2.9 0 2.9 0L13.7 0 0 12.1zm23.8-9.4h-2.6V6l2.6 2.2z"/></svg>
                             </a>
@@ -1211,7 +1211,7 @@
                         </li>
                     </ul>
                 </div>
-                <a class="subscription__button button button--white" href="#">Подписаться</a>
+                <a class="subscription__button button button--white btn-modal" href="#js-modal-subscription">Подписаться</a>
             </div>
         </section><!-- / .subscription -->
 
@@ -1670,6 +1670,58 @@
             </p>
         </form><!-- / .form -->
     </div><!-- / .modal-order -->
+
+    <!-- Modal registration -->
+    <div class="modal-registration modal-common" id="js-modal-registration" style="display: none">
+        <div class="modal-registration__box">
+            <div class="modal-registration__left modal-triggers">
+                <ul class="modal-triggers__list">
+                    <li class="modal-triggers__item">
+                        Если Вы хозяин фермы, сельского дома и т.п., создайте аккаунт, чтобы начать продвигать
+                        свой объект сельского туризма с помощью Paradise.
+                    </li>
+                    <li class="modal-triggers__item">
+                        Если Вы гость и просто ищите место, где Вам будет приятно отдохнуть, регистрация Вам не
+                        нужна. Просто найдите то, что Вам понравится и забронируйте.
+                    </li>
+                </ul>
+            </div><!-- / .modal-triggers -->
+            <form class="modal-registration__right form" action="#" method="post">
+                <p class="form__title">Создание аккаунта</p>
+                <ul class="form__fields-list fields-list">
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-registration-name">Ваше имя</label>
+                        <input class="fields-list__field" id="modal-registration-name" type="text" name="name" placeholder="Ваше имя">
+                    </li>
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-registration-email">Ваш e-mail</label>
+                        <input class="fields-list__field" id="modal-registration-email" type="email" name="email" placeholder="Ваш e-mail">
+                    </li>
+                    <li class="fields-list__item fields-list__item--full-width">
+                        <label class="visually-hidden" for="modal-registration-password">Пароль</label>
+                        <input class="fields-list__field" id="modal-registration-password" type="password" name="password" placeholder="Пароль">
+                    </li>
+                </ul>
+                <button class="form__button modal-login__button button">Зарегистрироваться</button>
+                <p class="form__agreement">Регистрируясь или входя в аккаунт Вы принимаете условия <a href="privacy-policy.html" target="_blank">пользовательского соглашения</a>.</p>
+            </form><!-- / .form -->
+        </div>
+    </div><!-- / .modal-registration -->
+
+    <!-- Modal subscription -->
+    <div class="modal-subscription modal-common" id="js-modal-subscription" style="display: none">
+        <p class="modal-common__title">Подписаться</p>
+        <form class="modal-subscription__form form" action="#" method="post">
+            <ul class="form__fields-list fields-list">
+                <li class="fields-list__item fields-list__item--full-width">
+                    <label class="visually-hidden" for="modal-subscription-email">Ваш e-mail</label>
+                    <input class="fields-list__field" id="modal-subscription-email" type="email" name="email" placeholder="Ваш e-mail">
+                </li>
+            </ul>
+            <button class="form__button modal-login__button button">Подписаться</button>
+            <p class="form__agreement">Подписываясь на рассылку Вы принимаете условия <a href="privacy-policy.html" target="_blank">пользовательского соглашения</a>.</p>
+        </form><!-- / .form -->
+    </div><!-- / .modal-subscription -->
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>

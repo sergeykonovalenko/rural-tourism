@@ -7,6 +7,15 @@
     border-radius: 4px;
 }
 
+.modal-common__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .modal-common__form {
     width: 350px;
     max-width: 100%;

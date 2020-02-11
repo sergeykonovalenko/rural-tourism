@@ -1,0 +1,32 @@
+.modal-registration {
+
+}
+
+.modal-registration__box {
+    display: flex;
+}
+
+.modal-registration__left {
+    flex-grow: 1;
+    margin-right: 30px;
+}
+
+.modal-registration__right {
+    flex-shrink: 0;
+    width: 340px;
+}
+
+@media screen and (max-width: 732px) {
+    .modal-registration__box {
+        display: block;
+    }
+
+    .modal-registration__left {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .modal-registration__right {
+        width: 100%;
+    }
+}

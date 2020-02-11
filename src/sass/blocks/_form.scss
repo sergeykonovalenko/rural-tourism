@@ -2,12 +2,25 @@
 
 }
 
+.form__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .form__field-group {
     margin: 0 0 30px 0;
 
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.form__fields-list {
+    margin: -15px -15px 15px 0;
 }
 
 .form__button-box {
@@ -19,5 +32,23 @@
 
     &:focus {
         outline: none;
+    }
+}
+
+.form__agreement {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.form__agreement a {
+    color: $color-secondary;
+    border-bottom: 1px solid $color-secondary;
+    transition: all .15s ease-in;
+
+    &:hover,
+    &:focus {
+        border-bottom-color: transparent;
     }
 }
