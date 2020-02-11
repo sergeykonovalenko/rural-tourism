@@ -20,7 +20,7 @@ function initMap() {
         let marker = new google.maps.Marker({
             position: {lat:46.569443, lng:30.791400},
             map: myMap,
-            icon: '../img/base/marker.svg',
+            icon: 'img/base/marker.svg',
             animation: google.maps.Animation.DROP,
         });
 
@@ -52,7 +52,7 @@ function initMap() {
         let marker = new google.maps.Marker({
             position: {lat:55.916748, lng:37.765349},
             map: myMap2,
-            icon: '../img/base/marker.svg',
+            icon: 'img/base/marker.svg',
             animation: google.maps.Animation.DROP,
         });
 

@@ -9,10 +9,6 @@
     &--static {
         position: static;
     }
-
-    //.show-main-nav & {
-    //    z-index: 2;
-    //}
 }
 
 .main-header__top {
@@ -98,18 +94,18 @@
     transition: top .2s ease, transform .2s ease, width .2s ease;
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(1),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(1),
 .show-internal-nav .main-header__hamburger b:nth-of-type(1) {
     bottom: calc(50% - (var(--mb-bar-height) / 2));
     transform: rotate(45deg);
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(2),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(2),
 .show-internal-nav .main-header__hamburger b:nth-of-type(2) {
     opacity: 0;
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(3),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(3),
 .show-internal-nav .main-header__hamburger b:nth-of-type(3) {
     top: calc(50% - (var(--mb-bar-height) / 2));
     transform: rotate(-45deg);
@@ -128,18 +124,18 @@
     transition-delay: .2s, 0s;
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(1),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(1),
 .show-internal-nav .main-header__hamburger b:nth-of-type(1) {
     transform: rotate(135deg);
     transition-delay: calc(var(--mb-animate-timeout) + 0s), calc(var(--mb-animate-timeout) + .2s);
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(2),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(2),
 .show-internal-nav .main-header__hamburger b:nth-of-type(2) {
     transition-delay: calc(var(--mb-animate-timeout) + 0s);
 }
 
-.show-main-nav .main-header__hamburger b:nth-of-type(3),
+.mm-wrapper_opening .main-header__hamburger b:nth-of-type(3),
 .show-internal-nav .main-header__hamburger b:nth-of-type(3) {
     transform: rotate(225deg);
     transition-delay: calc(var(--mb-animate-timeout) + 0s), calc(var(--mb-animate-timeout) + .2s);
@@ -200,7 +196,6 @@
         display: block;
     }
 
-    .main-header__bottom,
     .main-header__filter-desktop {
         display: none;
     }
