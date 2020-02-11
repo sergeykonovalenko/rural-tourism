@@ -36,10 +36,18 @@
 }
 
 .form__agreement {
-    margin-top: 15px;
-    margin-bottom: 0;
     font-size: 12px;
     line-height: 1.25;
+
+    &--bottom {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    &--top {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
 }
 
 .form__agreement a {

@@ -1178,7 +1178,7 @@
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                         ex ea commodo consequat.
                     </p>
-                    <a class="feedback-footer__button button button--with-icon button--with-icon--subscription" href="#">Написать нам</a>
+                    <a class="feedback-footer__button button button--with-icon button--with-icon--subscription btn-modal" href="#js-modal-feedback">Написать нам</a>
                 </div><!-- / .feedback-footer -->
                 <cite class="main-footer__author">Сельський туризм 2020 | Разработка сайта — <a href="https://one-pix.ru" target="_blank">One-Pix</a></cite>
             </div>
@@ -1609,7 +1609,7 @@
                     </li>
                 </ul>
                 <button class="form__button modal-login__button button">Зарегистрироваться</button>
-                <p class="form__agreement">Регистрируясь или входя в аккаунт Вы принимаете условия <a href="privacy-policy.html" target="_blank">пользовательского соглашения</a>.</p>
+                <p class="form__agreement form__agreement--bottom">Регистрируясь или входя в аккаунт Вы принимаете условия <a href="privacy-policy.html" target="_blank">пользовательского соглашения</a>.</p>
             </form><!-- / .form -->
         </div>
     </div><!-- / .modal-registration -->
@@ -1628,6 +1628,32 @@
             <p class="form__agreement">Подписываясь на рассылку Вы принимаете условия <a href="privacy-policy.html" target="_blank">пользовательского соглашения</a>.</p>
         </form><!-- / .form -->
     </div><!-- / .modal-subscription -->
+
+    <!-- Modal feedback -->
+    <div class="modal-feedback modal-common" id="js-modal-feedback" style="display: none">
+        <p class="modal-common__title">Написать нам</p>
+        <form class="modal-feedback__form form" action="#" method="post">
+            <ul class="form__fields-list fields-list">
+                <li class="fields-list__item fields-list__item--full-width">
+                    <label class="visually-hidden" for="modal-feedback-name">Ваше имя</label>
+                    <input class="fields-list__field" id="modal-feedback-name" type="text" name="name" placeholder="Ваше имя">
+                </li>
+                <li class="fields-list__item fields-list__item--full-width">
+                    <label class="visually-hidden" for="modal-feedback-email">Ваш e-mail</label>
+                    <input class="fields-list__field" id="modal-feedback-email" type="email" name="email" placeholder="Ваш e-mail">
+                </li>
+                <li class="fields-list__item fields-list__item--full-width">
+                    <label class="visually-hidden" for="modal-feedback-message">Сообщение</label>
+                    <textarea class="fields-list__field fields-list__field--textarea" id="modal-feedback-message" name="message" placeholder="Сообщение"></textarea>
+                </li>
+            </ul>
+            <div class="form__agreement form__agreement--top agreement">
+                <input class="agreement__field visually-hidden" id="modal-feedback-agreement" type="checkbox" name="agreement">
+                <label class="agreement__label" for="modal-feedback-agreement">Согласен с <a href="privacy-policy.html" target="_blank">политикой конфиденциальности</a> сайта selskij-turizm.one-pix.com</label>
+            </div>
+            <button class="form__button modal-login__button button">Отправить</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-feedback -->
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
