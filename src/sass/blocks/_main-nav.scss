@@ -30,7 +30,11 @@
             pointer-events: none;
         }
 
-        &:hover::after {
+        &:hover::after,
+        &.current-menu-ancestor::after,
+        &.current-menu-ancestor::after,
+        &.current-menu-item::after,
+        &.current-menu-item::after {
             background-image: url("img/bg/angle-down--regular-dark.svg");
         }
         
@@ -58,7 +62,18 @@
         text-transform: uppercase;
         color: #fff;
         text-align: center;
-        //transition: all .15s ease-in;
+    }
+
+    .main-nav__list > li.current-menu-ancestor > a,
+    .main-nav__list > li.current-menu-ancestor > span,
+    .main-nav__list > li.current-menu-item > a,
+    .main-nav__list > li.current-menu-item > span {
+        border-bottom: 3px solid #fff;
+        
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
     }
 
     .main-nav__list a:not([href]),
@@ -130,6 +145,23 @@
         padding-right: 30px;
     }
 
+    .main-nav__list > li > .sub-menu > li.current-menu-ancestor > a,
+    .main-nav__list > li > .sub-menu > li.current-menu-ancestor > span,
+    .main-nav__list > li > .sub-menu > li.current-menu-item > a,
+    .main-nav__list > li > .sub-menu > li.current-menu-item > span {
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+    }
+
     /***** 3rd level menu *****/
     .main-nav__list > li > .sub-menu > li > .sub-menu  {
         @include reset-list;
@@ -188,6 +220,23 @@
         padding-right: 30px;
     }
 
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li.current-menu-ancestor > a,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li.current-menu-ancestor > span,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li.current-menu-item > a,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li.current-menu-item > span {
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+    }
+
     /***** 4th level *****/
     .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu {
         @include reset-list;
@@ -214,6 +263,7 @@
 
     .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li > a,
     .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li > span {
+        position: relative;
         display: block;
         padding: 7px 25px;
         font-weight: 600;
@@ -226,6 +276,23 @@
     .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.menu-item-has-children > span {
         padding-right: 30px;
     }
+
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.current-menu-ancestor > a,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.current-menu-ancestor > span,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.current-menu-item > a,
+    .main-nav__list > li > .sub-menu > li > .sub-menu > li > .sub-menu > li.current-menu-item > span {
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+    }
 }
 
 @media screen and (max-width: 1230px) {
@@ -234,6 +301,19 @@
         &:not(.mm-menu) {
             display: none;
         }
+    }
+
+    .main-nav .current-menu-ancestor > a:first-child::before,
+    .main-nav .current-menu-parent > a:first-child::before,
+    .main-nav .current-menu-item > a:first-child::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: $color-secondary;
     }
 
     .main-nav__logo {
