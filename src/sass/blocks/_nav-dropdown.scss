@@ -1,0 +1,133 @@
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    padding: 15px 15px 30px;
+    background-color: rgba(150, 165, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0.9);
+    transform-origin: 50% 0;
+    transition: transform 0ms 300ms, opacity 300ms, visibility 0ms 300ms;
+}
+
+.nav-dropdown__column {
+    width: 190px;
+
+    &--level-1 {
+        width: 190px;
+    }
+
+    &--level-2 {
+        width: 330px;
+        background-color: rgba(56, 61, 8, 1);
+    }
+
+    &--level-3 {
+        width: 330px;
+        //background-color: #7f8919;
+        background-color: #60680d;
+    }
+}
+
+.nav-dropdown__list {
+    @include reset-list;
+    
+    &--level-2 {
+        display: none;
+        
+        &--active {
+            display: block;
+        }
+    }
+
+    &--level-3 {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+.nav-dropdown__list a,
+.nav-dropdown__list span {
+    position: relative;
+    display: block;
+    padding: 7px 15px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+/***** 1st level menu *****/
+.nav-dropdown__list--level-1 a,
+.nav-dropdown__list--level-1 span {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.nav-dropdown__item-level-1--active a,
+.nav-dropdown__item-level-1--active span {
+    background-color: rgba(56, 61, 8, 1);
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/***** 2nd level menu *****/
+.nav-dropdown__item-level-2 {
+
+    &--active a {
+        //background-color: #7f8919;
+        background-color: #60680d;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+    }
+}
+
+/***** 3rd level menu *****/
+.nav-dropdown__list--level-3 a {
+
+    &:hover {
+        background-color: #7f8919;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+    }
+}

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     'use strict';
-
+    
     const element = document.documentElement;
 
     // is mobile
@@ -308,9 +308,14 @@ $(document).ready(function () {
 
     // init date range picker
     let datePickerField = $('.js-date-range-picker');
+    let arrivalDate = $('input[name="arrival-date"]');
+    let dateDeparture = $('input[name="date-departure"]');
+    let holidayStartDate = $('input[name="holiday-start-date"]');
+    let holidayEndDate = $('input[name="holiday-end-date"]');
+    console.log(arrivalDate);
 
     datePickerField.daterangepicker({
-        singleDatePicker: true,
+        // singleDatePicker: true,
         showDropdowns: true,
         autoUpdateInput: false,
         //drops: 'up',
@@ -351,7 +356,17 @@ $(document).ready(function () {
     });
 
     datePickerField.on('apply.daterangepicker', function(ev, picker) {
-        $(this).val( picker.startDate.format('DD/MM/YYYY') );
+        let parent = $(this).closest('.modal-common');
+
+        if ( parent.hasClass('modal-order') ) {
+            arrivalDate.val( picker.startDate.format('DD/MM/YYYY') );
+            dateDeparture.val( picker.endDate.format('DD/MM/YYYY') );
+        }
+
+        if ( parent.hasClass('modal-review') ) {
+            holidayStartDate.val( picker.startDate.format('DD/MM/YYYY') );
+            holidayEndDate.val( picker.endDate.format('DD/MM/YYYY') );
+        }
     });
 
     /*datePickerField.on('cancel.daterangepicker', function(ev, picker) {
@@ -411,7 +426,7 @@ $(document).ready(function () {
 
     // init mmenu
     if (window.innerWidth < 1231) {
-        $('#js-main-nav').mmenu({
+        $('#js-main-nav-mobile').mmenu({
             // wrappers: ["wordpress"],
             extensions: [
                 'border-full',
@@ -492,6 +507,55 @@ $(document).ready(function () {
                        <span class="slider-interesting__more arrow-link arrow-link--to-left"><span>Читать меньше</span></span>
                    </p>`,
     });
+
+    ////////////////////////////////////////////////////////////////////////////
+    // DESKTOP MULTI-LEVEL MENU
+    let navItemFirstLevel = $('.nav-dropdown__list--level-1 li');
+    let navItemSecondLevel = $('.nav-dropdown__list--level-2 li');
+    let regionsList = $('.nav-dropdown__list--level-2');
+    let areasList = $('.nav-dropdown__list--level-3');
+
+    // 1st level – set default country
+    $('.nav-dropdown__list--level-1 li:first').addClass('nav-dropdown__item-level-1--active');
+
+    // 2nd level – default region activation
+    regionsList.find('li:first').addClass('nav-dropdown__item-level-2--active');
+
+    navItemFirstLevel.on('click', function () {
+        let navLinkFirstLevel = $(this).find('[data-show]');
+        let country = navLinkFirstLevel.attr('data-show');
+
+        // show/hide 1st level
+        navItemFirstLevel.removeClass('nav-dropdown__item-level-1--active');
+        $(this).addClass('nav-dropdown__item-level-1--active');
+
+        // show/hide 2nd level
+        regionsList.hide();
+        let currentRegionsList = $(`.${country}`);
+
+        currentRegionsList.show();
+
+        // show/hide 3rd level
+        let currentRegionLink = currentRegionsList.find('.nav-dropdown__item-level-2--active a');
+        let area = currentRegionLink.attr('data-show');
+        let currentAreasList = $(`.${area}`);
+
+        areasList.hide();
+        currentAreasList.show();
+    });
+
+    navItemSecondLevel.on('mouseover', function () {
+        let currentRegionsList = $(this).closest('ul');
+        currentRegionsList.find('.nav-dropdown__item-level-2--active').removeClass('nav-dropdown__item-level-2--active');
+        $(this).addClass('nav-dropdown__item-level-2--active');
+
+        let navLinkSecondLevel = $(this).find('[data-show]');
+        let area = navLinkSecondLevel.attr('data-show');
+
+        areasList.hide();
+        $(`.${area}`).show();
+    });
+    ////////////////////////////////////////////////////////////////////////////
 
     // masked input
     $('input[type="tel"]').mask("+7 (999) 999 99 99");
